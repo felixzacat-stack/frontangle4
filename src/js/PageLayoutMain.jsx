@@ -8,7 +8,7 @@ import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import PreviousWorkPage from "./pages/PreviousWorkPage";
 
-import Header from "./layout/Header.js";
+import Header from "./layout/Header";
 
 import {Switch} from "react-router-dom";
 import DemoPage from "./pages/snakething/DemoPage";
