@@ -2,7 +2,7 @@ import React from "react";
 
 import Footer from "./layout/Footer";
 
-import {Route} from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'; // Changed Switch to Routes
 
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
@@ -10,7 +10,6 @@ import PreviousWorkPage from "./pages/PreviousWorkPage";
 
 import Header from "./layout/Header";
 
-import {Switch} from "react-router-dom";
 import DemoPage from "./pages/snakething/DemoPage";
 import ResumePage from "./pages/resume/ResumePage";
 import Nav from "./layout/Nav";
@@ -31,32 +30,16 @@ export default function PageLayout() {
         <div>
             <Header/>
             <Nav i18n={i18n}/>
-                <Switch>
-                    <Route exact path="/public/OW.html">
-                        <HomePage/>
-                    </Route>
-                    <Route exact path="/">
-                        <HomePage/>
-                    </Route>
-                    <Route exact path="/main">
-                        <HomePage/>
-                    </Route>
-                    <Route path="/main/previous">
-                        <PreviousWorkPage/>
-                    </Route>
-                    <Route path="/main/contact">
-                        <ContactPage/>
-                    </Route>
-                    <Route path="/main/snakething">
-                        <DemoPage/>
-                    </Route>
-                    <Route path="/main/services">
-                        <ServicesPage/>
-                    </Route>
-                    <Route path="/main/resume">
-                        <ResumePage/>
-                    </Route>
-                </Switch>
+            <Routes>
+                <Route path="/public/OW.html" element={<HomePage />} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/main" element={<HomePage />} />
+                <Route path="/main/previous" element={<PreviousWorkPage />} />
+                <Route path="/main/contact" element={<ContactPage />} />
+                <Route path="/main/snakething" element={<DemoPage />} />
+                <Route path="/main/services" element={<ServicesPage />} />
+                <Route path="/main/resume" element={<ResumePage />} />
+            </Routes>
             <Footer/>
         </div>
     );

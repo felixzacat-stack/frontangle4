@@ -4,14 +4,27 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import Main from "./js/Main";
 import './i18n';
+import {createRoot} from "react-dom/client";
+import {BrowserRouter, HashRouter} from "react-router";
 
+const container = document.getElementById('root');
+const root = createRoot(container);
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Main />
-  </React.StrictMode>,
-  document.getElementById('root')
+root.render(
+    <React.StrictMode>
+        <BrowserRouter>
+        <Main />
+        </BrowserRouter>
+    </React.StrictMode>
 );
+
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Main />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

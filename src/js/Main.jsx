@@ -10,7 +10,8 @@ import '@fontsource/roboto/700.css';
 
 import './global.scss';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+import {Routes} from "react-router";
 
 function Main() {
 
@@ -20,23 +21,16 @@ function Main() {
     useEffect(() => {
     })
     return (
-        <BrowserRouter>
-            <Switch>
-                <Route exact path="/">
-                    <PageLayoutMain/>
-                </Route>
-                <Route path="/main">
-                    <PageLayoutMain/>
-                </Route>
-                <Route path="/icharts">
-                    <PageLayoutICharts/>
-                </Route>
-                <Route path="/#/icharts">
-                    <PageLayoutICharts/>
-                </Route>
-                <Route path="*" element={<div>Not found</div>}/>
-            </Switch>
-        </BrowserRouter>
+        // <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<PageLayoutMain />} />
+                {/* The /* allows nested routes inside PageLayoutMain to work */}
+                <Route path="/main/*" element={<PageLayoutMain />} />
+                {/* The /* allows nested routes inside PageLayoutICharts to work */}
+                <Route path="/icharts/*" element={<PageLayoutICharts />} />
+                <Route path="*" element={<div>Not found</div>} />
+            </Routes>
+        // </BrowserRouter>
     );
 }
 
