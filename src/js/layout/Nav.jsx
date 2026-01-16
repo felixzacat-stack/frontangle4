@@ -1,8 +1,9 @@
 import React from "react";
 import {useLocation} from "react-router-dom";
 import "./nav.scss"
-import { HashLink as Link } from 'react-router-hash-link';
+import {HashLink as Link, NavHashLink} from 'react-router-hash-link';
 import useWindowDimensions from "../useWindowDimension";
+import {NavLink} from "react-router";
 
 
 function Nav(props) {
@@ -129,25 +130,30 @@ function CommonMenuItems(props) {
                 </Link>
             </li>
             <li className={ne + " " + props.type + "-menu-item " + props.previousClassisActive}>
-                <Link to="/main/previous" className={props.previousClassisActive}>
-                    Current Projects
-                </Link>
+                {/*<Link to="/main/previous" className={props.previousClassisActive}>*/}
+                {/*    Current Projects*/}
+                {/*</Link>*/}
+                <NavLink to="/previous">Current Projects</NavLink>
             </li>
             <li className={ne + " " + props.type + "-menu-item "}>
 
 
-                <Link to="/main/services#frontend" >
-                    Services
-                </Link>
+                {/*<Link to="/main/services#frontend" >*/}
+                {/*    Services*/}
+                {/*</Link>*/}
+                <NavLink to="/services#frontend">Services</NavLink>
 
 
                 {/*<a className="dropdown" href="/main/services#frontend">Services</a>*/}
                 <SubMenu type={props.type}/>
             </li>
             <li className={ne + " " + props.type + "-menu-item " + props.contactClassisActive}>
-                <Link to="/main/contact" className={props.contactClassisActive}>
-                    Contact
-                </Link>
+
+                <NavLink to="/contact">Contact</NavLink>
+
+                {/*<Link to="/main/contact" className={props.contactClassisActive}>*/}
+                {/*    Contact*/}
+                {/*</Link>*/}
             </li>
 
             <li className={ne + " " + props.type + "-menu-item "}>
@@ -176,19 +182,19 @@ function SubMenu(props) {
     return (
         <ul className={props.type + "-sub-menu"}>
             <li className={props.type + "-sub-menu-item"}>
-                <Link to="/main/services#frontend" >
+                <NavHashLink to="/services#frontend" >
                     Front End Developement
-                </Link>
+                </NavHashLink>
             </li>
             <li className={props.type + "-sub-menu-item"}>
-                <Link to="/main/services#systems" >
+                <NavHashLink to="/services#systems" >
                     Systems Analysis and Databases
-                </Link>
+                </NavHashLink>
             </li>
             <li className={props.type + "-sub-menu-item"}>
-                <Link to="/main/services#coaching" >
+                <NavHashLink to="/services#coaching" >
                     Coaching
-                </Link>
+                </NavHashLink>
             </li>
         </ul>
     )

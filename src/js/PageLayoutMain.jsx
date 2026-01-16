@@ -1,46 +1,22 @@
 import React from "react";
-
-import Footer from "./layout/Footer";
-
-import { Route, Routes } from 'react-router-dom'; // Changed Switch to Routes
-
-import ContactPage from "./pages/ContactPage";
-import HomePage from "./pages/HomePage";
-import PreviousWorkPage from "./pages/PreviousWorkPage";
-
 import Header from "./layout/Header";
-
-import DemoPage from "./pages/snakething/DemoPage";
-import ResumePage from "./pages/resume/ResumePage";
-import Nav from "./layout/Nav";
-import ServicesPage from "./pages/ServicesPage";
+import Footer from "./layout/Footer";
+import { Outlet } from "react-router-dom";
 import {useTranslation} from "react-i18next";
+import Nav from "src/js/layout/Nav";
 
-/**
- * Contains nav on top, footer on bottom, and all the pages are passed in
- * as children..
- */
-export default function PageLayout() {
 
+export default function PageLayoutMain() {
     const { i18n } = useTranslation();
-
-    // props.
-
     return (
-        <div>
-            <Header/>
-            <Nav i18n={i18n}/>
-            <Routes>
-                <Route path="/public/OW.html" element={<HomePage />} />
-                <Route path="/" element={<HomePage />} />
-                <Route path="/main" element={<HomePage />} />
-                <Route path="/main/previous" element={<PreviousWorkPage />} />
-                <Route path="/main/contact" element={<ContactPage />} />
-                <Route path="/main/snakething" element={<DemoPage />} />
-                <Route path="/main/services" element={<ServicesPage />} />
-                <Route path="/main/resume" element={<ResumePage />} />
-            </Routes>
-            <Footer/>
+        <div className="page-layout">
+            <Header />
+            <Nav />
+            <main>
+                {/* This is where HomePage, ServicesPage, etc. will render */}
+                <Outlet />
+            </main>
+            <Footer />
         </div>
     );
 }

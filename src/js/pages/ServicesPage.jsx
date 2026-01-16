@@ -4,6 +4,10 @@ import "./contactPage.scss"
 import {Trans} from 'react-i18next';
 import {InView} from "react-intersection-observer";
 import "./servicesPage.scss"
+import {NavHashLink} from "react-router-hash-link";
+
+
+
 
 export default function ServicesPage() {
 
@@ -47,7 +51,7 @@ function ServicesWeb() {
         <h2 style={{marginTop: "0px"}}>
             <Trans i18nKey="services-web-header"/>
         </h2>
-        <p>
+        <div>
             <Trans i18nKey="services-web"/>
             <div className={"image"} id={"web-image"} />
             <ul>
@@ -76,13 +80,13 @@ function ServicesWeb() {
                     <Trans i18nKey="services-web-4"/>
                 </li>
             </ul>
-        </p>
+        </div>
     </>
 }
 
 function ServicesSystems() {
     return <>
-        <p>
+        <div>
             <h2>
                 <Trans i18nKey="services-systems-header"/>
             </h2>
@@ -102,13 +106,13 @@ function ServicesSystems() {
                     <Trans i18nKey="services-systems-4"/>
                 </li>
             </ul>
-        </p>
+        </div>
     </>;
 }
 
 function ServicesCoaching() {
     return <>
-        <p>
+        <div>
             <h2>
                 <Trans i18nKey="services-coaching-header"/>
             </h2>
@@ -129,6 +133,6 @@ function ServicesCoaching() {
                     <Trans i18nKey="services-coaching-4"/>
                 </li>
             </ul>
-        </p>
+        </div>
     </>;
 }
