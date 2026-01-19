@@ -8,7 +8,8 @@ export default defineConfig({
         react(),
         // This replaces html-loader functionality
         vitePluginString({
-            include: '**/*.html'
+            include: '**/*.html',
+            exclude: 'index.html'
         })
     ],
     resolve: {
