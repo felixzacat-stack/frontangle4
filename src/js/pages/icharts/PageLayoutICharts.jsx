@@ -2,12 +2,8 @@ import React from "react";
 
 import HeaderPanel from "./HeaderPanel";
 import RightPanel from "./RightPanel";
-import { Route} from "react-router-dom";
-import HomePanel from "./HomePanel";
-import Screenshots from "./Screenshots";
-import CodesamplesPanel from './CodesamplesPanel';
+import { Outlet } from "react-router-dom";
 import "./index.scss"
-import {Routes} from "react-router";
 /**
  * Contains nav on top, footer on bottom, and all the pages are passed in
  * as children..
@@ -25,11 +21,7 @@ export default function PageLayoutICharts(props) {
             <div style={containerStyle}>
                 <div>
                     <div>
-                        <Routes>
-                            <Route path="/icharts" element={<HomePanel />} />
-                            <Route path="/icharts/screenshots" element={<Screenshots />} />
-                            <Route path="/icharts/codesamples" element={<CodesamplesPanel />} />
-                        </Routes>
+                        <Outlet />
                     </div>
                 </div>
             </div>

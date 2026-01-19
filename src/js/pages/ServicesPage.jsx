@@ -1,16 +1,13 @@
 import React from "react";
 
 import "./contactPage.scss"
-import {Trans} from 'react-i18next';
+import {Trans, useTranslation} from 'react-i18next';
 import {InView} from "react-intersection-observer";
 import "./servicesPage.scss"
-import {NavHashLink} from "react-router-hash-link";
-
-
 
 
 export default function ServicesPage() {
-
+    const { t } = useTranslation();
     return (
         <section className="fa-page services paragraph-1">
             <InView>

@@ -4,10 +4,12 @@ import "./nav.scss"
 import {HashLink as Link, NavHashLink} from 'react-router-hash-link';
 import useWindowDimensions from "../useWindowDimension";
 import {NavLink} from "react-router";
+import {useTranslation} from "react-i18next";
 
 
 function Nav(props) {
     let location = useLocation();
+    const { i18n } = useTranslation();
     const homeClassisActive = location.pathname === "/main" ? "active" : "";
     let previousClassisActive = location.pathname.indexOf("previous") > 0 ? "active" : "";
     let contactClassisActive = location.pathname.indexOf("contact") > 0 ? "active" : "";
@@ -21,7 +23,7 @@ function Nav(props) {
         <>
             <nav role="navigation">
                 <StandardMenu
-                    i18n={props.i18n}
+                    i18n={i18n}
                     hamburgerActive={hamburgerActive}
                     setHamburgerActive={setHamburgerActive}
                     setShowHamburgerMenu={setShowHamburgerMenu}
@@ -43,7 +45,9 @@ function Nav(props) {
 
 
 function StandardMenu(props) {
-    const [lang, setLang] = React.useState("en");
+    // const [lang, setLang] = React.useState("en");
+
+    const currentLang = props.i18n.language;
 
     return (
 
@@ -77,18 +81,18 @@ function StandardMenu(props) {
             </li>
 
 
-            <li className={"navigation-element language " + (lang === "en" ? "active": "")} onClick={
+            <li className={"navigation-element language " + (currentLang === "en" ? "active": "")} onClick={
                 ()=>{
-                    setLang("en")
+                    // setLang("en")
                     props.i18n.changeLanguage("en");
                 }
 
             }>
                 <div id="english"/>
             </li>
-            <li className={"navigation-element language " + (lang === "de" ? "active": "")} onClick={
+            <li className={"navigation-element language " + (currentLang === "de" ? "active": "")} onClick={
                 ()=>{
-                    setLang("de");
+                    // setLang("de");
                     props.i18n.changeLanguage("de");
                     // window.location.reload();
                 }
@@ -162,7 +166,7 @@ function CommonMenuItems(props) {
                 {/*</Link>*/}
 
                 <a href="https://oliver-watkins.art/" className={""}>
-                    ..art
+                    ...art
                     </a>
             </li>
 

@@ -8,7 +8,7 @@ To start the dev server for developement
 
 Deploys automatically to Azure when committing to master, pushing and passing all the tests.
 
-(see azure-static-web...yml in gitub workflows.)
+(see azure-static-web...yml in github workflows.)
 
 ## DEPLOY
 

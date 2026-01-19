@@ -11,7 +11,8 @@ export default function ErrorPage() {
             <p>Sorry, an unexpected error has occurred. </p>
             <p>
 
-                <i>{error.statusText || error.message}</i>
+                <b>{error.statusText || error.message}</b>
+                <i>{JSON.stringify(error)}</i>
             </p>
         </div>
     );

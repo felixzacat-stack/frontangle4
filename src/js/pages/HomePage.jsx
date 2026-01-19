@@ -2,9 +2,10 @@ import React from "react";
 
 import './page.scss';
 import './homePage.scss';
-import {Trans} from "react-i18next";
+import {Trans, useTranslation} from "react-i18next";
 
 export default function HomePage() {
+    const { t } = useTranslation();
     return (
         <section className="fa-page fa-page-home">
             <div className="home-page-info paragraph-1">

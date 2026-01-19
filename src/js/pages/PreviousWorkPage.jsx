@@ -4,7 +4,7 @@ import './page.scss';
 import './previousWorkPage.scss';
 
 import ShapeShopSection from "./prevworkSections/ShapeShopSection";
-import {Trans} from "react-i18next";
+import {Trans, useTranslation} from "react-i18next";
 import IcebergChartsSection from "./prevworkSections/IcebergChartsSection";
 import ReactChartsSection from "./prevworkSections/ReactChartsSection";
 import BlogSection from "./prevworkSections/BlogSection";
@@ -16,7 +16,7 @@ import ArtGallerySection from "./prevworkSections/ArtGallerySection";
 export default function PreviousWorkPage() {
 
     const {width} = useWindowDimensions();
-
+    const { i18n } = useTranslation();
     return (
         <section className="fa-page previous-work ">
             <section className="previous-work-top paragraph-1">

@@ -11,7 +11,7 @@ export default function PageLayoutMain() {
     return (
         <div className="page-layout">
             <Header />
-            <Nav />
+            <Nav i18n={i18n}/>
             <main>
                 {/* This is where HomePage, ServicesPage, etc. will render */}
                 <Outlet />
