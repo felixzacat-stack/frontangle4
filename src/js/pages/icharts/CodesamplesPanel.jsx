@@ -4,7 +4,6 @@ import './CodesamplesPanel.scss';
 
 import samplesFile from './samples/samples.json'
 import DetailPanel from "./DetailPanel";
-import {Typography} from "@mui/material";
 
 export default function CodesamplesPanel() {
 
@@ -18,7 +17,7 @@ export default function CodesamplesPanel() {
 
     return (
         <div>
-            <Typography variant={"body1"} >
+            <p variant={"body1"} >
                 <h1>Code Samples</h1>
                 <h4>Quickly get started with these samples</h4>
                 <div id="tabs">
@@ -34,7 +33,7 @@ export default function CodesamplesPanel() {
                         </ul>
                     </div>
                 </div>
-            </Typography>
+            </p>
             <div id="mainView" style={{
                 marginTop: 30,
             }}>

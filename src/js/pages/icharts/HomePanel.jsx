@@ -1,10 +1,9 @@
 import React from "react";
-import {Box, Typography} from "@mui/material";
 
 export default function HomePanel(props) {
   return (
-      <Box>
-        <Typography variant={"body1"}>
+      <div>
+        <p>
 
           <div style={{margin: "30px"}}>
             Iceberg Charts is an advanced charting library for creating charts in Java.
@@ -37,7 +36,7 @@ export default function HomePanel(props) {
           </span>
         </pre>
           </div>
-        </Typography>
-      </Box>
+        </p>
+      </div>
   )
 }

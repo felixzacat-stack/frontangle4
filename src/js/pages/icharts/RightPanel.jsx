@@ -1,7 +1,6 @@
 import React from "react";
 
 import githubImage from './img/download_github.jpg';
-import {Box, Typography} from "@mui/material";
 
 export default function RightPanel() {
     const styleGithubButton = {
@@ -18,14 +17,14 @@ export default function RightPanel() {
 
     return (
         <section className="container " style={styleSection}>
-            <Box p={2}>
+            <div style={{padding: 2}}>
                 <a href="https://github.com/oliverwatkins/Iceberg-Charts">
                     <img style={styleGithubButton} src={githubImage} alt={""}/>
                 </a>
-                <Typography variant={"body1"}>
+                <p variant={"body1"}>
                     Add it to your maven project :
-                </Typography>
-                <Box>
+                </p>
+                <div>
                     <pre>
                       {/*<span style={{fontSize: 10, fontFamily: "courier new"}}>*/}
                         <code>
@@ -37,11 +36,11 @@ export default function RightPanel() {
                         </code>
                         {/*</span>*/}
                     </pre>
-                </Box>
-                <Typography variant={"body1"}>
+                </div>
+                <p variant={"body1"}>
                     And quickly get started with these code samples.
-                </Typography>
-            </Box>
+                </p>
+            </div>
         </section>
     )
 }
