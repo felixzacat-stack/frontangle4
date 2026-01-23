@@ -10,6 +10,22 @@ Deploys automatically to Azure when committing to master, pushing and passing al
 
 (see azure-static-web...yml in github workflows.)
 
+
+UPDATE!!!
+
+Because of problems with oliverwatkins account, the project deploys to felixzacat-stack
+
+https://github.com/felixzacat-stack/frontangle4/
+
+everything compiles and woprks, and the azure pipeline works.
+
+
+
+
+
+
+
+
 ## DEPLOY
 
 To deploy, first create a build distribution
