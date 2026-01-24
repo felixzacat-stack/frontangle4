@@ -1,5 +1,5 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
-import App from "src/layout/App";
+import { createBrowserRouter } from "react-router";
+import App from "src/App";
 import HomePage from "src/pages/HomePage";
 import ServicesPage from "src/pages/ServicesPage";
 import PreviousWorkPage from "src/pages/PreviousWorkPage";
