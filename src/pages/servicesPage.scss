@@ -19,8 +19,8 @@
     height: 400px;
     width: 400px;
     //mask :
-    -webkit-mask-image: url(../../img/splatter2.svg);
-    mask-image: url(../../img/splatter2.svg);
+    -webkit-mask-image: url(../img/splatter2.svg);
+    mask-image: url(../img/splatter2.svg);
     -webkit-mask-size: 100%;
     mask-size: 100%;
     -webkit-mask-repeat: no-repeat;
@@ -52,14 +52,14 @@
 #web-image {
   float: right;
   border: 5px solid red;
-  background: url("../../img/laptop4.png");
+  background: url("../img/laptop4.png");
   background-size: cover;
 }
 
 #uml-image {
   float: left;
   border: 5px solid red;
-  background: url("../../img/uml.png");
+  background: url("../img/uml.png");
   background-color: gray;
   background-size: cover;
 }
@@ -67,7 +67,7 @@
 #coaching-image {
   float: right;
   border: 5px solid red;
-  background: url("../../img/coaching.jpg");
+  background: url("../img/coaching.jpg");
   background-size: cover;
 }
 

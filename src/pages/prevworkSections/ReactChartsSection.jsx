@@ -1,5 +1,5 @@
 import "../page.scss";
-import bw from "../../../img/react-charts-1167-846.jpg";
+import bw from "../../img/react-charts-1167-846.jpg";
 // import ImageGallery from "react-image-gallery";
 import { Trans } from "react-i18next";
 

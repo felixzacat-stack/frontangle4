@@ -24,7 +24,7 @@
 
 .contact-page-image {
   //border: 5px solid red;
-  background: url("../../img/Fotolia_107797505_L.jpg");
+  background: url("../img/Fotolia_107797505_L.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 
@@ -33,8 +33,8 @@
   max-width: 25vw;
   aspect-ratio: 3 / 2;
 
-  -webkit-mask-image: url(../../img/splatter.svg);
-  mask-image: url(../../img/splatter.svg);
+  -webkit-mask-image: url(../img/splatter.svg);
+  mask-image: url(../img/splatter.svg);
   -webkit-mask-size: cover;
   -webkit-mask-repeat: no-repeat;
   mask-size: cover;

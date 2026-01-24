@@ -1,6 +1,6 @@
 import "../page.scss";
 
-import bw from "../../../img/bw_1167x847.png";
+import bw from "../../img/bw_1167x847.png";
 import { Trans } from "react-i18next";
 
 export default function BlogSection() {

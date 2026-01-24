@@ -21,14 +21,14 @@
 
     //background image :
     border: 5px solid red;
-    background: url("../../img/Fotolia_107797505_L.jpg");
+    background: url("../img/Fotolia_107797505_L.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top;
 
     //mask :
-    -webkit-mask-image: url(../../img/splatter2.svg);
-    mask-image: url(../../img/splatter2.svg);
+    -webkit-mask-image: url(../img/splatter2.svg);
+    mask-image: url(../img/splatter2.svg);
     -webkit-mask-size: 73%;
     mask-size: 73%;
     -webkit-mask-repeat: no-repeat;

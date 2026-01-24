@@ -66,7 +66,7 @@ nav {
   padding-right: $sidePadding_normal;
 
   li #hamburger-icon{
-    background-image: url("../../img/Hamburger_icon.svg");
+    background-image: url("../img/Hamburger_icon.svg");
     min-height: 20px;
     width:30px;
     background-repeat: no-repeat;
@@ -95,13 +95,13 @@ nav {
 
     #german {
       min-height: 20px;
-      background-image: url("../../img/germany-flag-icon.svg");
+      background-image: url("../img/germany-flag-icon.svg");
       background-repeat: no-repeat;
     }
 
     #english {
       min-height: 20px;
-      background-image: url("../../img/united-kingdom-flag-icon.svg");
+      background-image: url("../img/united-kingdom-flag-icon.svg");
       background-repeat: no-repeat;
     }
   }
