@@ -186,7 +186,7 @@ function CommonMenuItems(props) {
         {/*</Link>*/}
 
         <a href="https://oliver-watkins.art/" className={""}>
-          ..art
+          ...art
         </a>
       </li>
 
