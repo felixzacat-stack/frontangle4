@@ -235,8 +235,17 @@ $mobileHeight: 35px;
       }
 
       .language {
-        padding: 5px;
-        display:block;
+        padding: 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 100%;
+
+        div {
+          width: 30px;
+          min-height: 20px;
+        }
       }
       .hamburger-icon-item {
         padding: 0;

@@ -16,9 +16,15 @@ function Nav(props) {
     location.pathname.indexOf("contact") > 0 ? "active" : "";
 
   const { width } = useWindowDimensions();
-  console.info("width " + width);
   const [hamburgerActive, setHamburgerActive] = React.useState(false);
   const [showHamburgerMenu, setShowHamburgerMenu] = React.useState(false);
+
+  React.useEffect(() => {
+    if (width > 1200) {
+      setHamburgerActive(false);
+      setShowHamburgerMenu(false);
+    }
+  }, [width]);
 
   return (
     <>
