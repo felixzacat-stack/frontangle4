@@ -163,7 +163,7 @@ li.language:hover{
 
   font-family: "Roboto","Helvetica","Arial",sans-serif;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 15px;
 
   text-decoration: none;
 
@@ -172,19 +172,18 @@ li.language:hover{
 
   .hamburger-menu-item {
     background: #ffffff;
-    //border-bottom: 1px;
     display:block;
     a {
       color:$navSelectedColor;
       text-decoration: none;
-      padding: 4px;
+      padding: 8px 12px;
+      display: block;
     }
 
     border-bottom: 1px solid rgba(128, 128, 128, 0.37);
   }
 
   .dropdown:after {
-    //arrow
     content: '';
   }
 
@@ -193,10 +192,12 @@ li.language:hover{
   }
   .hamburger-sub-menu-item {
     display:block;
-    font-size: 18px;
+    font-size: 13px;
     visibility: visible;
     border-bottom: 1px solid rgba(128, 128, 128, 0.21);
-
+    a {
+      padding: 6px 12px 6px 24px;
+    }
   }
 }
 
@@ -238,8 +239,12 @@ $mobileHeight: 35px;
         display:block;
       }
       .hamburger-icon-item {
-        padding: 5px 5px 0px 5px;
-        display:block;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 100%;
       }
     }
   }
