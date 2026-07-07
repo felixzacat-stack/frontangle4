@@ -1,6 +1,7 @@
 import React from "react";
 
 import githubImage from "./img/download_github.jpg";
+import MavenSnippet from "./MavenSnippet";
 
 export default function RightPanel() {
   const styleGithubButton = {
@@ -21,23 +22,9 @@ export default function RightPanel() {
         <a href="https://github.com/oliverwatkins/Iceberg-Charts">
           <img style={styleGithubButton} src={githubImage} alt={""} />
         </a>
-        <p variant={"body1"}>Add it to your maven project :</p>
-        <div>
-          <pre>
-            {/*<span style={{fontSize: 10, fontFamily: "courier new"}}>*/}
-            <code>
-              &lt;dependency&gt; <br />
-              &nbsp; &lt;groupId&gt;com.frontangle&lt;/groupId&gt; <br />
-              &nbsp; &lt;artifactId&gt;iceberg-charts&lt;/artifactId&gt; <br />
-              &nbsp; &lt;version&gt;1.2.0&lt;/version&gt; <br />
-              &lt;/dependency&gt;
-            </code>
-            {/*</span>*/}
-          </pre>
-        </div>
-        <p variant={"body1"}>
-          And quickly get started with these code samples.
-        </p>
+        <p>Add it to your maven project :</p>
+        <MavenSnippet/>
+        <p>And quickly get started with these code samples.</p>
       </div>
     </section>
   );

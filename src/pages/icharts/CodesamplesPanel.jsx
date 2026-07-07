@@ -16,35 +16,33 @@ export default function CodesamplesPanel() {
 
   return (
     <div>
-      <p variant={"body1"}>
-        <h1>Code Samples</h1>
-        <h4>Quickly get started with these samples</h4>
-        <div id="tabs">
-          <div>
-            <ul>
-              {navHeader &&
-                navHeader.map(function (name, index) {
-                  if (name.fileName === fileName) {
-                    return (
-                      <li key={index} className="active">
-                        {name.title}
-                      </li>
-                    );
-                  } else {
-                    return (
-                      <li
-                        key={index}
-                        onClick={() => setFileName(name.fileName)}
-                      >
-                        {name.title}
-                      </li>
-                    );
-                  }
-                })}
-            </ul>
-          </div>
+      <h1>Code Samples</h1>
+      <h4>Quickly get started with these samples</h4>
+      <div id="tabs">
+        <div>
+          <ul>
+            {navHeader &&
+              navHeader.map(function (name, index) {
+                if (name.fileName === fileName) {
+                  return (
+                    <li key={index} className="active">
+                      {name.title}
+                    </li>
+                  );
+                } else {
+                  return (
+                    <li
+                      key={index}
+                      onClick={() => setFileName(name.fileName)}
+                    >
+                      {name.title}
+                    </li>
+                  );
+                }
+              })}
+          </ul>
         </div>
-      </p>
+      </div>
       <div
         id="mainView"
         style={{
