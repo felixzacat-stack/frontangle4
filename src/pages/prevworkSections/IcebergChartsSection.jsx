@@ -27,6 +27,9 @@ export default function IcebergChartsSection() {
   return (
     <>
       <div className={"previous-work-description paragraph-2"}>
+        <h2 style={{ marginTop: "0px" }}>
+          <Trans i18nKey="previous-ic-header" />
+        </h2>
         <p>
           <Trans i18nKey="previous-ic" />
           <ul>

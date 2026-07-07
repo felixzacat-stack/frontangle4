@@ -1,22 +1,22 @@
 import React from "react";
 
+const images = import.meta.glob("./samples/*.PNG", { eager: true, import: "default" });
+const htmlSnippets = import.meta.glob("./samples/*.html", { eager: true, import: "default" });
+
 export default function DetailPanel(props) {
     return (
         <div>
             {props.samples && props.samples.map((elem) => {
-                let img, h2;
-                try {
-                    img = require("./samples/" + elem.fileName + ".PNG")
-                    h2 = require("./samples/" + elem.fileName + ".html")
-                } catch (e) {
-                    console.error(e)
+                if (!elem.fileName || props.selected !== elem.fileName) {
+                    return null;
                 }
-                return <div id="mainView">
-                    {elem.fileName && (props.selected === elem.fileName) && <img src={img} style={{
+                const img = images["./samples/" + elem.fileName + ".PNG"];
+                const html = htmlSnippets["./samples/" + elem.fileName + ".html"];
+                return <div id="mainView" key={elem.fileName}>
+                    {img && <img src={img} style={{
                         width: "400px",
                     }} alt={"chart image " + elem.fileName}/>}
-                    {h2 && h2.default && (props.selected === elem.fileName) &&
-                        <div dangerouslySetInnerHTML={{__html: h2.default}}/>}
+                    {html && <div dangerouslySetInnerHTML={{__html: html}}/>}
                 </div>
             })}
         </div>

@@ -5,7 +5,7 @@ footer {
   color: #123123;
   padding: 2px;
   width: 90%;
-  bottom: 0;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: $breakpoint-width-tablet) {

@@ -9,7 +9,8 @@ export default defineConfig({
         // This replaces html-loader functionality
         vitePluginString({
             include: '**/*.html',
-            exclude: 'index.html'
+            exclude: 'index.html',
+            compress: false
         })
     ],
     resolve: {

@@ -11,7 +11,7 @@ export default function App() {
       <Header />
       <Nav />
 
-      <main style={{ padding: "1rem" }}>
+      <main style={{ padding: "1rem", flex: 1 }}>
         <Outlet />
       </main>
 

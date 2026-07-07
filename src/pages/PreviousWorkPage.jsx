@@ -7,7 +7,8 @@ import IcebergChartsSection from "./prevworkSections/IcebergChartsSection";
 import ReactChartsSection from "./prevworkSections/ReactChartsSection";
 import BlogSection from "./prevworkSections/BlogSection";
 import { InView } from "react-intersection-observer";
-import SnakeThing from "./snakething/SnakeThing";
+// SnakeThing background disabled - uncomment to re-enable (see wrapper below)
+// import SnakeThing from "./snakething/SnakeThing";
 import useWindowDimensions from "../useWindowDimension";
 import ArtGallerySection from "./prevworkSections/ArtGallerySection";
 
@@ -19,12 +20,15 @@ export default function PreviousWorkPage() {
       <section className="previous-work-top paragraph-1">
         <Trans i18nKey="previous-blurb" />
       </section>
-      <SnakeThing parentWidht={width} snakeWidth={12} x1={200} x2={400}>
+      {/* SnakeThing background disabled - swap this <> for
+          <SnakeThing parentWidht={width} snakeWidth={12} x1={200} x2={400}> to re-enable */}
+      <>
         <InView>
           {({ inView, ref }) => {
             return (
               <section
                 ref={ref}
+                id="shapeshop"
                 className={"prev-section left " + (inView ? "show" : "hidden")}
               >
                 <ShapeShopSection align={"left"} />
@@ -43,6 +47,7 @@ export default function PreviousWorkPage() {
             return (
               <section
                 ref={ref}
+                id="icebergcharts"
                 className={"prev-section right " + (inView ? "show" : "hidden")}
               >
                 <IcebergChartsSection align={"right"} />
@@ -55,6 +60,7 @@ export default function PreviousWorkPage() {
           {({ inView, ref }) => (
             <section
               ref={ref}
+              id="artgallery"
               className={"prev-section " + (inView ? "show" : "hidden")}
             >
               <ArtGallerySection />
@@ -83,7 +89,7 @@ export default function PreviousWorkPage() {
             </section>
           )}
         </InView>
-      </SnakeThing>
+      </>
     </section>
   );
 }

@@ -163,7 +163,16 @@ function CommonMenuItems(props) {
         {/*<Link to="/main/previous" className={props.previousClassisActive}>*/}
         {/*    Current Projects*/}
         {/*</Link>*/}
-        <NavLink to="/previous">Current Projects</NavLink>
+        <NavLink to="/previous">Projects</NavLink>
+
+        <SubMenu
+          type={props.type}
+          items={[
+            { to: "/previous#shapeshop", label: "Shape Shop" },
+            { to: "/previous#icebergcharts", label: "Iceberg Charts" },
+            { to: "/previous#artgallery", label: "Art Gallery" },
+          ]}
+        />
       </li>
       <li className={ne + " " + props.type + "-menu-item "}>
         {/*<Link to="/main/services#frontend" >*/}
@@ -172,7 +181,14 @@ function CommonMenuItems(props) {
         <NavLink to="/services#frontend">Services</NavLink>
 
         {/*<a className="dropdown" href="/main/services#frontend">Services</a>*/}
-        <SubMenu type={props.type} />
+        <SubMenu
+          type={props.type}
+          items={[
+            { to: "/services#frontend", label: "Front End Developement" },
+            { to: "/services#systems", label: "Systems Analysis and Databases" },
+            { to: "/services#coaching", label: "Coaching" },
+          ]}
+        />
       </li>
       <li
         className={
@@ -208,19 +224,11 @@ function CommonMenuItems(props) {
 function SubMenu(props) {
   return (
     <ul className={props.type + "-sub-menu"}>
-      <li className={props.type + "-sub-menu-item"}>
-        <NavHashLink to="/services#frontend">
-          Front End Developement
-        </NavHashLink>
-      </li>
-      <li className={props.type + "-sub-menu-item"}>
-        <NavHashLink to="/services#systems">
-          Systems Analysis and Databases
-        </NavHashLink>
-      </li>
-      <li className={props.type + "-sub-menu-item"}>
-        <NavHashLink to="/services#coaching">Coaching</NavHashLink>
-      </li>
+      {props.items.map((item) => (
+        <li className={props.type + "-sub-menu-item"} key={item.to}>
+          <NavHashLink to={item.to}>{item.label}</NavHashLink>
+        </li>
+      ))}
     </ul>
   );
 }

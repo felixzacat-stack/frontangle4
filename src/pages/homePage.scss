@@ -11,6 +11,7 @@
 
   .home-page-info {
     padding: 2rem;
+    display: flow-root; // clearfix so the card wraps the floated image instead of collapsing under it
   }
 
   .home-page-image {

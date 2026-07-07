@@ -22,6 +22,9 @@ export default function ShapeShopSection() {
   return (
     <>
       <div className={"previous-work-description paragraph-2"}>
+        <h2 style={{ marginTop: "0px" }}>
+          <Trans i18nKey="previous-ss-header" />
+        </h2>
         <p>
           {/*<div className={"paragraph-1"} >*/}
           <Trans i18nKey="previous-ss" />

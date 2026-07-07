@@ -65,10 +65,10 @@ $imgChartWidthP: 300px;
     //border: 5px solid green;
     .previous-work-description {
       ul {
-        direction: rtl;
+        direction: ltr;
       }
       p {
-        text-align: right;
+        text-align: left;
       }
     }
   }
@@ -87,14 +87,13 @@ $imgChartWidthP: 300px;
     z-index: 3;
     display: flex;
     justify-content: flex-end;
-    max-height: 500px;
 
     .previous-work-description {
       padding: 0rem 2rem 2rem 2rem;
       p {
         padding-top: 0rem;
         margin-top: 0rem;
-        text-align: right;
+        text-align: left;
       }
       font-family: Arial, Helvetica, sans-serif;
       color: $standardTextColor;
@@ -133,7 +132,7 @@ $imgChartWidthP: 300px;
   }
   .prev-section {
     //border: 3px dashed blue;
-    margin-bottom: 500px;
+    margin-bottom: 60px;
   }
   .prev-section-top {
     margin-bottom: 0px;
@@ -141,8 +140,6 @@ $imgChartWidthP: 300px;
   .previous-work {
     .prev-section.right,
     .prev-section {
-      max-height : 500px;
-      min-height : 500px;
       //border: 5px solid pink;
       display: flex;
       justify-content: flex-end;
@@ -188,10 +185,10 @@ $imgChartWidthP: 300px;
   }
   .prev-section {
     //border: 3px dashed blue;
-    margin-bottom: 250px;
+    margin-bottom: 60px;
   }
   .prev-section-top {
-    margin-bottom: 250px;
+    margin-bottom: 60px;
   }
 
   .boxy {

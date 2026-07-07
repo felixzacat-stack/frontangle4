@@ -20,10 +20,13 @@ const resources = {
             "previous-blurb":
                 `<p>For over 20 years and in three cities (Melbourne, London, Munich) I have worked across a diverse cross-section of companies including financial services, telecommunication companies, eCommerce and startups to German household names such as BMW and Lufthansa.</p>
                 <p>In my spare time between client projects, these are some of the projects I work on.</p>`,
+            "previous-artgallery-header": "Art Gallery",
             "previous-artgallery":
                 'In my spare time I paint. You can check out my paintings on my gallery website. The website is a self made react app without using any frameworks.',
+            "previous-ss-header": "Shape Shop",
             "previous-ss":
                 `Shape Shop is an ecommerce platform in developement that allows small and medium sized companies to administer their product catalog. A white labelling solution exists for developing customized public facing websites`,
+            "previous-ic-header": "Iceberg Charts",
             "previous-ic":
                 `Iceberg Charts is an advanced charting library for creating charts in Java. It offers a rich set of charting features including :`,
             "previous-rc":
@@ -81,13 +84,16 @@ const resources = {
                 `<p>Seit über 20 Jahren und in drei Städten (Melbourne, London, München) habe ich für eine Vielzahl von Unternehmen gearbeitet, darunter Finanzdienstleister, Telekommunikationsunternehmen, E-Commerce und Start-ups bis hin zu bekannten deutschen Namen wie BMW und Lufthansa.</p>
                 <p>In meiner Freizeit zwischen Kundenprojekte sind dies einige der Projekte, an denen ich arbeite.</p>`,
 
+            "previous-artgallery-header": "Kunstgalerie",
             "previous-artgallery":
                 'In meiner Freizeit male ich. Du kannst meine Gemälde auf meiner Galerie-Website anschauen. Die Website ist eine selbstgemachte React-App, ohne die Verwendung von Frameworks.',
 
 
 
+            "previous-ss-header": "Shape Shop",
             "previous-ss":
                 `Shape Shop ist eine E-Commerce-Plattform in der Entwicklung, die es kleinen und mittleren Unternehmen ermöglicht, ihren Produktkatalog zu verwalten. Es gibt eine White-Labeling-Lösung für die Entwicklung angepasster, öffentlich zugänglicher Websites`,
+            "previous-ic-header": "Iceberg Charts",
             "previous-ic": `Iceberg Charts ist eine fortschrittliche Diagrammbibliothek zum Erstellen von Diagrammen in Java. Es bietet eine Vielzahl von Diagrammfunktionen, darunter:`,
             "previous-rc": `Meine Charting-Anwendung ist ein kontinuierliches „Work in Progress“, das zusammen mit einigen Komponenten von Drittanbietern vollständig in React-JS geschrieben wurde <strong> [HINWEIS: Derzeit veraltet] </strong>`,
             "previous-bl": `In meinem Blog schreibe ich über Javascript und Javascript-Frameworks, Java-Swing-Komponenten, Projekte, an denen ich arbeite, Probleme, auf die ich gestoßen bin, und technische Reviews.`,

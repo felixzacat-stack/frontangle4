@@ -7,6 +7,16 @@ body {
   line-height: 1.4;
   background: #6D737723;
 }
+
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 $sidePadding_phone: 2px;
 $sidePadding_tablet: 5px;
 $sidePadding_normal: 10%;
