@@ -54,7 +54,7 @@ export default function HeaderPanel() {
                         {/*TODO ali8gn to the right*/}
                         <li className={frontAngleIsActive}>
                             <Link to="/" onClick={toggleCollapse.bind(this)}>
-                                <img width={"30px"} src={faImage} alt={""}/>
+                                <img width={"42px"} src={faImage} alt={""}/>
                             </Link>
                         </li>
                     </ul>

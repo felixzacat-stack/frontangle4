@@ -13,10 +13,12 @@
   max-width: min(583px, 90vw);
   height: auto;
   margin: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 #header-container img:not(#header-title-icharts) {
-  max-width: 70px;
+  max-width: 140px;
   height: auto;
 }
 
@@ -75,6 +77,11 @@
 
       &:last-child {
         margin-left: auto;
+
+        a {
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
       }
     }
   }
