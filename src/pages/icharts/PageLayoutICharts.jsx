@@ -10,20 +10,15 @@ import "./index.scss"
  */
 export default function PageLayoutICharts(props) {
     const {location} = props;
-    const containerStyle = {
-        marginTop: "0px"
-    };
 
     return (
         <div className="icharts">
             <HeaderPanel location={location}/>
-            <RightPanel location={location}/>
-            <div style={containerStyle}>
-                <div>
-                    <div>
-                        <Outlet />
-                    </div>
+            <div className="icharts-body">
+                <div className="icharts-main">
+                    <Outlet />
                 </div>
+                <RightPanel location={location}/>
             </div>
         </div>
     );

@@ -1,15 +1,8 @@
-//
-//.navbar {
-//
-//}
-
 .icharts {
   background: rgb(255, 255, 255);
   font-family: Arial, Helvetica, sans-serif;
 
   pre {
-    border: #0e0e0e dashed medium;
-    background: red;
     padding: 5px;
     font-size: 12px;
     font-family: "courier new";
@@ -22,18 +15,32 @@
 .icharts .navbar {
   background-image: linear-gradient(#9054eb, #2fa4e7 60%, #1d9ce5);
   background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff54b4eb', endColorstr='#ff1d9ce5', GradientType=0);
   border-bottom: 1px solid #cc17c3;
-  -webkit-filter: none;
-  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
 
-  .navbar-default {
-    background-color: #2f32e7;
-    border-color: #1995dc;
-  }
+.icharts-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
 
-  .active {
-    background: #0033ff;
+.icharts-main {
+  flex: 1 1 400px;
+  min-width: 0;
+}
+
+.icharts-sidebar {
+  flex: 0 1 300px;
+  background: #ebebeb;
+  border-radius: 6px;
+  padding: 15px;
+
+  &__github {
+    margin: 0 0 10px;
+    max-width: 100%;
+    height: auto;
   }
 }

@@ -14,7 +14,9 @@ export default function DetailPanel(props) {
                 const html = htmlSnippets["./samples/" + elem.fileName + ".html"];
                 return <div id="mainView" key={elem.fileName}>
                     {img && <img src={img} style={{
-                        width: "400px",
+                        maxWidth: "400px",
+                        width: "100%",
+                        height: "auto",
                     }} alt={"chart image " + elem.fileName}/>}
                     {html && <div dangerouslySetInnerHTML={{__html: html}}/>}
                 </div>
