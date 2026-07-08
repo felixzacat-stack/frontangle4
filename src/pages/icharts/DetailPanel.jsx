@@ -1,7 +1,7 @@
 import React from "react";
 
 const images = import.meta.glob("./samples/*.PNG", { eager: true, import: "default" });
-const htmlSnippets = import.meta.glob("./samples/*.html", { eager: true, import: "default" });
+const htmlSnippets = import.meta.glob("./samples/*.html", { eager: true, query: "?raw", import: "default" });
 
 export default function DetailPanel(props) {
     return (
