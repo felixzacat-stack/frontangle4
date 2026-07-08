@@ -44,6 +44,9 @@ export default function ShapeShopSection() {
             <li>all running on the Azure Cloud</li>
           </ul>
 
+          <a href={"/shapeshop/"}>Visit the website here</a>
+
+          <br />
           <a href={"https://github.com/oliverwatkins/shape-shop-backend"}>
             Github backend
           </a>

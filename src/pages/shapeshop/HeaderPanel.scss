@@ -1,0 +1,85 @@
+#header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 15px 5px;
+}
+
+#header-title-shapeshop {
+  max-width: min(500px, 90vw);
+  height: auto;
+  margin: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#header-container img:not(#header-title-shapeshop) {
+  max-width: 90px;
+  height: auto;
+}
+
+#header-blurb {
+  margin: 1px 15px 15px 20px;
+  font-family: Arial, Helvetica;
+  font-size: 20px;
+  color: #3a4a55;
+}
+
+.navbar {
+  // Overrides the unscoped `nav { padding-left/right: 10% }` rule from the
+  // main site's layout/nav.scss, which otherwise leaks into this sub-site.
+  padding-left: 0;
+  padding-right: 0;
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  ul.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      a {
+        display: block;
+        padding: 15px 20px;
+        color: #ffffff;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        border-bottom: 3px solid transparent;
+        transition: background-color 0.15s ease, border-color 0.15s ease;
+
+        p {
+          margin: 0;
+        }
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.15);
+        }
+      }
+
+      &.active a {
+        background: rgba(0, 0, 0, 0.2);
+        border-bottom-color: #ffffff;
+      }
+
+      &:last-child {
+        margin-left: auto;
+
+        a {
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+}

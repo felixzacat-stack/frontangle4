@@ -9,6 +9,10 @@ import PageLayoutICharts from "src/pages/icharts/PageLayoutICharts";
 import HomePanel from "src/pages/icharts/HomePanel";
 import Screenshots from "src/pages/icharts/Screenshots";
 import CodesamplesPanel from "src/pages/icharts/CodesamplesPanel";
+import PageLayoutShapeShop from "src/pages/shapeshop/PageLayoutShapeShop";
+import ShapeShopHomePanel from "src/pages/shapeshop/HomePanel";
+import ShapeShopScreenshots from "src/pages/shapeshop/Screenshots";
+import ShapeShopContactPanel from "src/pages/shapeshop/ContactPanel";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +35,16 @@ export const router = createBrowserRouter([
       { index: true, element: <HomePanel /> },
       { path: "screenshots", element: <Screenshots /> },
       { path: "codesamples", element: <CodesamplesPanel /> },
+    ],
+  },
+  {
+    path: "/shapeshop",
+    element: <PageLayoutShapeShop />,
+    errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: <ShapeShopHomePanel /> },
+      { path: "screenshots", element: <ShapeShopScreenshots /> },
+      { path: "contact", element: <ShapeShopContactPanel /> },
     ],
   },
 ]);
