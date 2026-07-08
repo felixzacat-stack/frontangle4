@@ -1,5 +1,4 @@
 import bannerImage from './img/shapeshop-banner.png';
-import iconImage from './img/shapeshop-icon.png';
 import faImage from './img/FrontAngle_For_Site.png';
 
 import {Link, useLocation} from "react-router-dom";
@@ -18,7 +17,6 @@ export default function HeaderPanel() {
         <div id="header">
             <div id="header-container">
                 <img id="header-title-shapeshop" src={bannerImage} alt={"Shape Shop"}/>
-                <img src={iconImage} alt={"shapeshop"}/>
             </div>
             <div id="header-blurb">
                 An e-commerce platform for small and medium sized companies to administer their product catalog.

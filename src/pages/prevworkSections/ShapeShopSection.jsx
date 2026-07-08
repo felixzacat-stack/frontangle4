@@ -2,19 +2,11 @@ import "../page.scss";
 
 import ImageGallery from "react-image-gallery";
 
-import c1 from "../shapeshop/img/ss3.png";
-import c2 from "../shapeshop/img/ss4.png";
-import c3 from "../shapeshop/img/ss5.png";
-import c4 from "../shapeshop/img/ss6.png";
-import c5 from "../shapeshop/img/ss7.png";
-import c6 from "../shapeshop/img/ss6.png";
-import c7 from "../shapeshop/img/ssah1.png";
-
-import c8 from "../shapeshop/img/ssah3.png";
-import c9 from "../shapeshop/img/ssah5.png";
-import c10 from "../shapeshop/img/ssah1.png";
-import c11 from "../shapeshop/img/ssh1.png";
-import c12 from "../shapeshop/img/ssh2.png";
+import c1 from "../shapeshop/img/shop-products.png";
+import c2 from "../shapeshop/img/shop-checkout.png";
+import c3 from "../shapeshop/img/shop-admin-products.png";
+import c4 from "../shapeshop/img/shop-admin-edit-product.png";
+import c5 from "../shapeshop/img/shop-admin-orders.png";
 
 import { Trans } from "react-i18next";
 
@@ -26,22 +18,13 @@ export default function ShapeShopSection() {
           <Trans i18nKey="previous-ss-header" />
         </h2>
         <p>
-          {/*<div className={"paragraph-1"} >*/}
           <Trans i18nKey="previous-ss" />
-          {/*</div>*/}
 
-          {/*    Shape Shop is an ecommerce platform in developement that allows small and medium sized companies to administer their product catalog. A white labelling solution*/}
-          {/*exists for developing customized public facing websites.*/}
           <ul>
-            <li>React</li>
-            <li>Redux middleware</li>
-            <li>Typescript</li>
-            <li>Hooks</li>
-            <li>Material UI</li>
-            <li>Testing with Enzyme and Jest</li>
+            <li>React, Hooks, TypeScript, MUI</li>
             <li>Spring Boot</li>
             <li>MySQL</li>
-            <li>all running on the Azure Cloud</li>
+            <li>Azure Cloud</li>
           </ul>
 
           <a href={"/shapeshop/"}>Visit the website here</a>
@@ -86,33 +69,5 @@ const someInterestingImages = [
   {
     original: c5,
     thumbnail: c5,
-  },
-  {
-    original: c6,
-    thumbnail: c6,
-  },
-  {
-    original: c7,
-    thumbnail: c7,
-  },
-  {
-    original: c8,
-    thumbnail: c8,
-  },
-  {
-    original: c9,
-    thumbnail: c9,
-  },
-  {
-    original: c10,
-    thumbnail: c10,
-  },
-  {
-    original: c11,
-    thumbnail: c11,
-  },
-  {
-    original: c12,
-    thumbnail: c12,
   },
 ];

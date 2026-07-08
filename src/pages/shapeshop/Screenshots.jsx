@@ -1,11 +1,11 @@
 
 import "./Screenshots.scss";
 
-import img1 from "./img/ss3.png";
-import img2 from "./img/ss4.png";
-import img3 from "./img/ss5.png";
-import img4 from "./img/ss6.png";
-import img5 from "./img/ss7.png";
+import img1 from "./img/shop-products.png";
+import img2 from "./img/shop-checkout.png";
+import img3 from "./img/shop-admin-products.png";
+import img4 from "./img/shop-admin-edit-product.png";
+import img5 from "./img/shop-admin-orders.png";
 
 const screenshots = [img1, img2, img3, img4, img5];
 
