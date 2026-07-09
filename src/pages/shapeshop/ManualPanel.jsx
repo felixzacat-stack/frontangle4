@@ -1,4 +1,9 @@
-import adminScreenshot from "./img/shop-admin-orders.png";
+import adminOrdersScreenshot from "./img/shop-admin-orders.png";
+import adminProductsScreenshot from "./img/shop-admin-products.png";
+import adminCategoriesScreenshot from "./img/shop-admin-categories.png";
+import adminLayoutScreenshot from "./img/shop-admin-layout.png";
+import adminVariantsScreenshot from "./img/shop-admin-variants.png";
+import adminSettingsScreenshot from "./img/shop-admin-settings.png";
 
 export default function ManualPanel() {
   return (
@@ -21,20 +26,20 @@ export default function ManualPanel() {
             they land on the Administration Console, which is organised into five tabs.
           </p>
 
-          <img className="manual-screenshot" src={adminScreenshot} alt="Administration Console showing the Orders tab" />
-
           <h3>Orders</h3>
           <p>
             Shows incoming orders split into <em>Active Orders</em> (pending, confirmed, ready) and
             <em> Completed / Cancelled</em>. Clicking an order opens its detail screen, showing what was
             ordered and letting the owner move it through its states.
           </p>
+          <img className="manual-screenshot" src={adminOrdersScreenshot} alt="Orders tab showing active orders" />
 
           <h3>Products</h3>
           <p>
             Add, edit, and remove the products customers see in the shop, including product images and
             pricing.
           </p>
+          <img className="manual-screenshot" src={adminProductsScreenshot} alt="Products tab showing the product grid" />
 
           <h3>Categories</h3>
           <p>
@@ -43,22 +48,26 @@ export default function ManualPanel() {
             one, drag category tabs to reorder them, and switch to tree view for a sidebar layout of
             categories and their products.
           </p>
+          <img className="manual-screenshot" src={adminCategoriesScreenshot} alt="Create Category dialog" />
 
           <h3>Layout</h3>
           <p>
             Controls how the shop's home page and product listings are arranged (e.g. single page, category
             menu, or a custom layout), and lets the owner set the header and welcome images.
           </p>
+          <img className="manual-screenshot" src={adminLayoutScreenshot} alt="Shop Layout options" />
 
           <h3>Variants</h3>
           <p>
             Manage product variants — such as different sizes or colours of the same product.
           </p>
+          <img className="manual-screenshot" src={adminVariantsScreenshot} alt="Variant Types panel" />
 
           <h3>Settings</h3>
           <p>
             General store settings for the site.
           </p>
+          <img className="manual-screenshot" src={adminSettingsScreenshot} alt="Settings panel showing welcome and header image options" />
         </section>
 
         <section id="shop">
