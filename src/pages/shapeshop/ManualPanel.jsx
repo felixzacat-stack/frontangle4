@@ -1,3 +1,6 @@
+import shopBrowsingScreenshot from "./img/shop-products.png";
+import shopCheckoutScreenshot from "./img/shop-checkout.png";
+import shopOrderStatusScreenshot from "./img/shop-order-status.png";
 import adminOrdersScreenshot from "./img/shop-admin-orders.png";
 import adminProductsScreenshot from "./img/shop-admin-products.png";
 import adminCategoriesScreenshot from "./img/shop-admin-categories.png";
@@ -15,9 +18,38 @@ export default function ManualPanel() {
         </p>
 
         <div className="manual-jump-nav">
-          <a href="#admin-panel">Admin Panel</a>
           <a href="#shop">Shop</a>
+          <a href="#admin-panel">Admin Panel</a>
         </div>
+
+        <section id="shop">
+          <h2>Using the Shop</h2>
+          <p>
+            This is the storefront customers use — no login required.
+          </p>
+
+          <h3>Browsing</h3>
+          <p>
+            Customers land on the home page and enter the shop to browse products by category, depending on
+            the layout chosen in the admin panel.
+          </p>
+          <img className="manual-screenshot" src={shopBrowsingScreenshot} alt="Shop showing products in a category" />
+
+          <h3>Checkout</h3>
+          <p>
+            Once ready to order, customers move through a short checkout flow: delivery address, payment
+            method, payment details, and an order summary to review before confirming. After confirming, they
+            see an order confirmation screen.
+          </p>
+          <img className="manual-screenshot" src={shopCheckoutScreenshot} alt="Checkout delivery or pickup step" />
+
+          <h3>Order status</h3>
+          <p>
+            After an order is placed, its progress (pending → confirmed → ready → completed, or cancelled) is
+            tracked in the admin Orders tab.
+          </p>
+          <img className="manual-screenshot" src={shopOrderStatusScreenshot} alt="Order confirmation screen" />
+        </section>
 
         <section id="admin-panel">
           <h2>Using the Admin Panel</h2>
@@ -68,32 +100,6 @@ export default function ManualPanel() {
             General store settings for the site.
           </p>
           <img className="manual-screenshot" src={adminSettingsScreenshot} alt="Settings panel showing welcome and header image options" />
-        </section>
-
-        <section id="shop">
-          <h2>Using the Shop</h2>
-          <p>
-            This is the storefront customers use — no login required.
-          </p>
-
-          <h3>Browsing</h3>
-          <p>
-            Customers land on the home page and enter the shop to browse products by category, depending on
-            the layout chosen in the admin panel.
-          </p>
-
-          <h3>Checkout</h3>
-          <p>
-            Once ready to order, customers move through a short checkout flow: delivery address, payment
-            method, payment details, and an order summary to review before confirming. After confirming, they
-            see an order confirmation screen.
-          </p>
-
-          <h3>Order status</h3>
-          <p>
-            After an order is placed, its progress (pending → confirmed → ready → completed, or cancelled) is
-            tracked in the admin Orders tab.
-          </p>
         </section>
       </div>
   );
