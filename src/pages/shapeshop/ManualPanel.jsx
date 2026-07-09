@@ -29,8 +29,16 @@ export default function ManualPanel() {
 
           <h3>Products</h3>
           <p>
-            Add, edit, and remove the products and categories customers see in the shop, including product
-            images and pricing.
+            Add, edit, and remove the products customers see in the shop, including product images and
+            pricing.
+          </p>
+
+          <h3>Categories</h3>
+          <p>
+            Categories are managed from within the Products tab, where each category appears as its own tab
+            alongside an <em>ALL</em> tab showing every product. Use <em>Create Category</em> to add a new
+            one, drag category tabs to reorder them, and switch to tree view for a sidebar layout of
+            categories and their products.
           </p>
 
           <h3>Layout</h3>
