@@ -12,3 +12,33 @@
 .shapeshop-main {
   padding: 20px;
 }
+
+.shapeshop-manual {
+  h2 {
+    margin-top: 1.5em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.3em;
+  }
+
+  h3 {
+    margin-top: 1em;
+  }
+}
+
+.manual-jump-nav {
+  display: flex;
+  gap: 1em;
+  margin: 1em 0 2em;
+
+  a {
+    color: #333;
+    background-color: #eee;
+    padding: 0.4em 1em;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: #ddd;
+  }
+}

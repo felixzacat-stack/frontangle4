@@ -13,6 +13,7 @@ import PageLayoutShapeShop from "src/pages/shapeshop/PageLayoutShapeShop";
 import ShapeShopHomePanel from "src/pages/shapeshop/HomePanel";
 import ShapeShopScreenshots from "src/pages/shapeshop/Screenshots";
 import ShapeShopContactPanel from "src/pages/shapeshop/ContactPanel";
+import ShapeShopManualPanel from "src/pages/shapeshop/ManualPanel";
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +45,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <ShapeShopHomePanel /> },
       { path: "screenshots", element: <ShapeShopScreenshots /> },
+      { path: "manual", element: <ShapeShopManualPanel /> },
       { path: "contact", element: <ShapeShopContactPanel /> },
     ],
   },
