@@ -25,6 +25,14 @@
   }
 }
 
+.manual-screenshot {
+  display: block;
+  max-width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 1em 0 1.5em;
+}
+
 .manual-jump-nav {
   display: flex;
   gap: 1em;

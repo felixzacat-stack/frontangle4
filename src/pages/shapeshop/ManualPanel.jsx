@@ -1,3 +1,4 @@
+import adminScreenshot from "./img/shop-admin-orders.png";
 
 export default function ManualPanel() {
   return (
@@ -19,6 +20,8 @@ export default function ManualPanel() {
             The shop owner signs in from the <em>Admin</em> link in the site's top navigation. Once logged in
             they land on the Administration Console, which is organised into five tabs.
           </p>
+
+          <img className="manual-screenshot" src={adminScreenshot} alt="Administration Console showing the Orders tab" />
 
           <h3>Orders</h3>
           <p>
