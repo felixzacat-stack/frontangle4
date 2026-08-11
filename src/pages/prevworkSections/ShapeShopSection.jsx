@@ -30,16 +30,22 @@ export default function ShapeShopSection() {
           <a href={"/shapeshop/"}>Visit the website here</a>
 
           <br />
-          <a href={"https://github.com/oliverwatkins/shape-shop-backend"}>
-            Github backend
-          </a>
-          <br />
-          <a href={"https://github.com/oliverwatkins/shape-shop-front-end2"}>
-            Github frontend
+          <a
+            href={"https://shapeshop-aks.eastus.cloudapp.azure.com/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Live site (Azure)
           </a>
 
           <br />
-          <a href={"https://alpenhof3.netlify.app/"}>demo</a>
+          {/*<a href={"https://github.com/oliverwatkins/shape-shop-backend"}>*/}
+          {/*  Github backend*/}
+          {/*</a>*/}
+          {/*<br />*/}
+          {/*<a href={"https://github.com/oliverwatkins/shape-shop-front-end2"}>*/}
+          {/*  Github frontend*/}
+          {/*</a>*/}
         </p>
       </div>
       <div className={"boxy"}>

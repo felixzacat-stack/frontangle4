@@ -15,6 +15,16 @@ export default function HomePanel() {
         </ul>
 
         <p>Check out some screenshots and then get in touch on the contact page.</p>
+
+        <p>
+          <a
+            href="https://shapeshop-aks.eastus.cloudapp.azure.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit the live site on Azure
+          </a>
+        </p>
       </div>
   )
 }
