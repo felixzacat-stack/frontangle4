@@ -17,3 +17,10 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
   }
 }
+
+// Mobile screenshots are portrait (roughly 9:19.5) rather than the desktop
+// 1.556:1 landscape ratio, so they use a narrower column width to avoid
+// oversized cards.
+.screenshot-grid-mobile {
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
