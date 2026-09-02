@@ -11,6 +11,7 @@
   border-radius: 4px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: zoom-in;
 
   &:hover {
     transform: scale(1.02);
@@ -23,4 +24,37 @@
 // oversized cards.
 .screenshot-grid-mobile {
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+.screenshot-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+.screenshot-lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+.screenshot-lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 8px;
 }
