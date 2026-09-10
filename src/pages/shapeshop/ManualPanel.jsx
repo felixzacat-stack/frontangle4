@@ -33,7 +33,7 @@ export default function ManualPanel() {
             Customers land on the home page and enter the shop to browse products by category, depending on
             the layout chosen in the admin panel.
           </p>
-          <img className="manual-screenshot" src={shopBrowsingScreenshot} alt="Shop showing products in a category" />
+          <img className="manual-screenshot" data-shot-id="shop-products-desktop" src={shopBrowsingScreenshot} alt="Shop showing products in a category" />
 
           <h3>Checkout</h3>
           <p>
@@ -41,14 +41,14 @@ export default function ManualPanel() {
             method, payment details, and an order summary to review before confirming. After confirming, they
             see an order confirmation screen.
           </p>
-          <img className="manual-screenshot" src={shopCheckoutScreenshot} alt="Checkout delivery or pickup step" />
+          <img className="manual-screenshot" data-shot-id="shop-checkout-desktop" src={shopCheckoutScreenshot} alt="Checkout delivery or pickup step" />
 
           <h3>Order status</h3>
           <p>
             After an order is placed, its progress (pending → confirmed → ready → completed, or cancelled) is
             tracked in the admin Orders tab.
           </p>
-          <img className="manual-screenshot" src={shopOrderStatusScreenshot} alt="Order confirmation screen" />
+          <img className="manual-screenshot" data-shot-id="shop-order-status-desktop" src={shopOrderStatusScreenshot} alt="Order confirmation screen" />
         </section>
 
         <section id="admin-panel">
@@ -64,14 +64,14 @@ export default function ManualPanel() {
             <em> Completed / Cancelled</em>. Clicking an order opens its detail screen, showing what was
             ordered and letting the owner move it through its states.
           </p>
-          <img className="manual-screenshot" src={adminOrdersScreenshot} alt="Orders tab showing active orders" />
+          <img className="manual-screenshot" data-shot-id="admin-orders-desktop" src={adminOrdersScreenshot} alt="Orders tab showing active orders" />
 
           <h3>Products</h3>
           <p>
             Add, edit, and remove the products customers see in the shop, including product images and
             pricing.
           </p>
-          <img className="manual-screenshot" src={adminProductsScreenshot} alt="Products tab showing the product grid" />
+          <img className="manual-screenshot" data-shot-id="admin-products-desktop" src={adminProductsScreenshot} alt="Products tab showing the product grid" />
 
           <h3>Categories</h3>
           <p>
@@ -80,26 +80,26 @@ export default function ManualPanel() {
             one, drag category tabs to reorder them, and switch to tree view for a sidebar layout of
             categories and their products.
           </p>
-          <img className="manual-screenshot" src={adminCategoriesScreenshot} alt="Create Category dialog" />
+          <img className="manual-screenshot" data-shot-id="admin-categories-desktop" src={adminCategoriesScreenshot} alt="Create Category dialog" />
 
           <h3>Layout</h3>
           <p>
             Controls how the shop's home page and product listings are arranged (e.g. single page, category
             menu, or a custom layout), and lets the owner set the header and welcome images.
           </p>
-          <img className="manual-screenshot" src={adminLayoutScreenshot} alt="Shop Layout options" />
+          <img className="manual-screenshot" data-shot-id="admin-layout-desktop" src={adminLayoutScreenshot} alt="Shop Layout options" />
 
           <h3>Variants</h3>
           <p>
             Manage product variants — such as different sizes or colours of the same product.
           </p>
-          <img className="manual-screenshot" src={adminVariantsScreenshot} alt="Variant Types panel" />
+          <img className="manual-screenshot" data-shot-id="admin-variants-desktop" src={adminVariantsScreenshot} alt="Variant Types panel" />
 
           <h3>Settings</h3>
           <p>
             General store settings for the site.
           </p>
-          <img className="manual-screenshot" src={adminSettingsScreenshot} alt="Settings panel showing welcome and header image options" />
+          <img className="manual-screenshot" data-shot-id="admin-settings-desktop" src={adminSettingsScreenshot} alt="Settings panel showing welcome and header image options" />
         </section>
       </div>
   );
