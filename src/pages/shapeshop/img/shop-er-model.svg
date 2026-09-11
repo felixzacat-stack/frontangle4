@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1248 1014" font-family="Arial, Helvetica, sans-serif">
+<style>
+  .box { fill: #eef4fc; stroke: #2c5aa0; stroke-width: 1.5; }
+  .box-hub { fill: #2c5aa0; stroke: #17356b; stroke-width: 1.5; }
+  .label { fill: #14305c; font-size: 14px; font-weight: 600; text-anchor: middle; dominant-baseline: middle; }
+  .label-hub { fill: #ffffff; font-size: 15px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+  .rel { stroke: #6b7a90; stroke-width: 1.5; fill: none; }
+</style>
+<rect x="0" y="0" width="1248" height="1014" fill="#ffffff"/>
+<defs>
+  <marker id="tickOneStart" markerWidth="14" markerHeight="16" refX="0" refY="8" orient="auto">
+    <line x1="4" y1="1" x2="4" y2="15" stroke="#4a5568" stroke-width="1.5"/>
+  </marker>
+  <marker id="tickOneEnd" markerWidth="14" markerHeight="16" refX="14" refY="8" orient="auto">
+    <line x1="10" y1="1" x2="10" y2="15" stroke="#4a5568" stroke-width="1.5"/>
+  </marker>
+  <marker id="crowMany" markerWidth="22" markerHeight="20" refX="18" refY="10" orient="auto">
+    <path d="M1,10 L18,1 M1,10 L18,10 M1,10 L18,19" stroke="#4a5568" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </marker>
+</defs>
+<g>
+<path d="M688.5,525.0 L848.1,525.0 L848.1,525.0 L1007.8,525.0" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M936.3,827.7 L936.3,776.2 L840.6,776.2 L840.6,724.7" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M666.0,550.0 L666.0,612.3 L788.1,612.3 L788.1,674.7" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M986.9,627.4 L925.0,627.4 L925.0,699.7 L863.1,699.7" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M562.7,650.8 L637.9,650.8 L637.9,699.7 L713.1,699.7" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M561.0,797.0 L561.0,855.7 L361.4,855.7 L361.4,914.4" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M735.6,724.7 L735.6,886.0 L466.4,886.0 L466.4,914.4" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M613.5,550.0 L613.5,609.1 L666.0,609.1 L666.0,747.0" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M1082.8,550.0 L1082.8,579.2 L1148.0,579.2 L1148.0,885.3 L865.6,885.3 L865.6,914.4" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M666.0,797.0 L666.0,855.7 L760.6,855.7 L760.6,914.4" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M538.5,525.0 L490.0,525.0 L490.0,525.0 L441.5,525.0" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M561.0,747.0 L561.0,687.9 L314.0,687.9 L314.0,550.0" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M435.2,625.8 L435.2,587.9 L419.0,587.9 L419.0,550.0" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M561.0,500.0 L561.0,437.7 L438.8,437.7 L438.8,375.3" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M438.8,325.3 L438.8,294.3 L306.3,294.3 L306.3,263.2" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M538.5,772.0 L284.8,772.0 L284.8,627.4 L240.0,627.4" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M201.3,263.2 L201.3,432.8 L165.0,432.8 L165.0,602.4" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M631.0,500.0 L631.0,437.7 L735.6,437.7 L735.6,375.3" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M788.1,325.3 L788.1,207.7 L561.0,207.7 L561.0,90.0" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M1082.8,500.0 L1082.8,151.5 L666.0,151.5 L666.0,90.0" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M840.6,375.3 L840.6,462.6 L666.0,462.6 L666.0,500.0" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M596.0,500.0 L596.0,401.5 L613.5,401.5 L613.5,303.0" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+<path d="M561.0,550.0 L561.0,587.9 L540.2,587.9 L540.2,625.8" class="rel" marker-start="url(#tickOneStart)" marker-end="url(#crowMany)"/>
+</g>
+<g>
+<rect x="538.5" y="500.0" width="150" height="50" class="box-hub"/>
+<text x="613.5" y="526.0" class="label-hub">company</text>
+<rect x="538.5" y="253.0" width="150" height="50" class="box"/>
+<text x="613.5" y="279.0" class="label">settings</text>
+<rect x="713.1" y="325.3" width="150" height="50" class="box"/>
+<text x="788.1" y="351.3" class="label">layout</text>
+<rect x="538.5" y="40.0" width="150" height="50" class="box"/>
+<text x="613.5" y="66.0" class="label">layout_category</text>
+<rect x="1007.8" y="500.0" width="150" height="50" class="box-hub"/>
+<text x="1082.8" y="526.0" class="label-hub">category</text>
+<rect x="861.3" y="827.7" width="150" height="50" class="box"/>
+<text x="936.3" y="853.7" class="label">address</text>
+<rect x="986.9" y="602.4" width="150" height="50" class="box"/>
+<text x="1061.9" y="628.4" class="label">credit_card</text>
+<rect x="713.1" y="674.7" width="150" height="50" class="box-hub"/>
+<text x="788.1" y="700.7" class="label-hub">orders</text>
+<rect x="338.9" y="914.4" width="150" height="50" class="box"/>
+<text x="413.9" y="940.4" class="label">orders_item</text>
+<rect x="538.5" y="747.0" width="150" height="50" class="box-hub"/>
+<text x="613.5" y="773.0" class="label-hub">product</text>
+<rect x="412.7" y="625.8" width="150" height="50" class="box-hub"/>
+<text x="487.7" y="651.8" class="label-hub">users</text>
+<rect x="738.1" y="914.4" width="150" height="50" class="box"/>
+<text x="813.1" y="940.4" class="label">product_category</text>
+<rect x="291.5" y="500.0" width="150" height="50" class="box"/>
+<text x="366.5" y="526.0" class="label">favourite</text>
+<rect x="363.8" y="325.3" width="150" height="50" class="box-hub"/>
+<text x="438.8" y="351.3" class="label-hub">variant</text>
+<rect x="178.8" y="213.2" width="150" height="50" class="box"/>
+<text x="253.8" y="239.2" class="label">variant_item</text>
+<rect x="90.0" y="602.4" width="150" height="50" class="box"/>
+<text x="165.0" y="628.4" class="label">product_variant</text>
+</g>
+</svg>
