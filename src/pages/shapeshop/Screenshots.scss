@@ -1,3 +1,17 @@
+.screenshot-category {
+  margin-bottom: 2.5em;
+
+  h2 {
+    margin-top: 1.5em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.3em;
+  }
+
+  h3 {
+    margin-top: 1em;
+  }
+}
+
 .screenshot-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
