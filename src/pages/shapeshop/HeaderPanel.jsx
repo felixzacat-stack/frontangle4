@@ -10,6 +10,7 @@ export default function HeaderPanel() {
 
     const homeIsActive = location.pathname === "/shapeshop" ? "active" : "";
     const screenshotsIsActive = location.pathname === "/shapeshop/screenshots" ? "active" : "";
+    const examplesIsActive = location.pathname === "/shapeshop/examples" ? "active" : "";
     const modelIsActive = location.pathname === "/shapeshop/model" ? "active" : "";
     const manualIsActive = location.pathname === "/shapeshop/manual" ? "active" : "";
     const contactIsActive = location.pathname === "/shapeshop/contact" ? "active" : "";
@@ -36,6 +37,11 @@ export default function HeaderPanel() {
                         <li className={screenshotsIsActive}>
                             <Link to="/shapeshop/screenshots">
                                 <p variant={"body1"}>Screenshots</p>
+                            </Link>
+                        </li>
+                        <li className={examplesIsActive}>
+                            <Link to="/shapeshop/examples">
+                                <p variant={"body1"}>Examples</p>
                             </Link>
                         </li>
                         <li className={modelIsActive}>

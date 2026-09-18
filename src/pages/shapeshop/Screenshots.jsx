@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Screenshots.scss";
 
-import shopHome from "./img/shop-home.png";
-import shopHomeMobile from "./img/shop-home-mobile.png";
 import shopProducts from "./img/shop-products.png";
 import shopProductsMobile from "./img/shop-products-mobile.png";
 import shopCart from "./img/shop-cart.png";
@@ -32,7 +30,6 @@ import adminSettings from "./img/shop-admin-settings.png";
 // description. `mobileSrc` is omitted for screens that are desktop-only.
 const SHOTS = [
   // --- Shop ---
-  { category: "shop", id: "shop-home", alt: "Landing page", desktopSrc: shopHome, mobileSrc: shopHomeMobile },
   { category: "shop", id: "shop-products", alt: "Shop showing products in a category", desktopSrc: shopProducts, mobileSrc: shopProductsMobile },
   { category: "shop", id: "shop-cart", alt: "Cart summary popover", desktopSrc: shopCart, mobileSrc: shopCartMobile },
   { category: "shop", id: "shop-checkout", alt: "Checkout delivery or pickup step", desktopSrc: shopCheckout, mobileSrc: shopCheckoutMobile },

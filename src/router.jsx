@@ -15,6 +15,7 @@ import ShapeShopScreenshots from "src/pages/shapeshop/Screenshots";
 import ShapeShopContactPanel from "src/pages/shapeshop/ContactPanel";
 import ShapeShopManualPanel from "src/pages/shapeshop/ManualPanel";
 import ShapeShopModel from "src/pages/shapeshop/Model";
+import ShapeShopExamplesPanel from "src/pages/shapeshop/ExamplesPanel";
 
 export const router = createBrowserRouter([
   {
@@ -46,6 +47,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <ShapeShopHomePanel /> },
       { path: "screenshots", element: <ShapeShopScreenshots /> },
+      { path: "examples", element: <ShapeShopExamplesPanel /> },
       { path: "model", element: <ShapeShopModel /> },
       { path: "manual", element: <ShapeShopManualPanel /> },
       { path: "contact", element: <ShapeShopContactPanel /> },
