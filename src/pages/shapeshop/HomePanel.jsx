@@ -1,3 +1,4 @@
+import LiveSiteLink from "src/pages/shapeshop/LiveSiteLink";
 
 export default function HomePanel() {
   return (
@@ -17,13 +18,7 @@ export default function HomePanel() {
         <p>Check out some screenshots and then get in touch on the contact page.</p>
 
         <p>
-          <a
-            href="https://shapeshop-aks.eastus.cloudapp.azure.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit the live site on Azure
-          </a>
+          <LiveSiteLink>Visit the live site on Azure</LiveSiteLink>
         </p>
       </div>
   )

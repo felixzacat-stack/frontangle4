@@ -1,3 +1,4 @@
+import LiveSiteLink from "src/pages/shapeshop/LiveSiteLink";
 
 export default function ContactPanel() {
   return (
@@ -9,7 +10,7 @@ export default function ContactPanel() {
         <ul>
           <li>Email: <a href="mailto:oliver.f.watkins@gmail.com">oliver.f.watkins@gmail.com</a></li>
           <li>
-            <a href="https://shapeshop-aks.eastus.cloudapp.azure.com/" target="_blank" rel="noopener noreferrer">Live site (Azure)</a>
+            <LiveSiteLink />
           </li>
           <li>
             <a href="https://github.com/oliverwatkins/shape-shop-backend">Github backend</a>

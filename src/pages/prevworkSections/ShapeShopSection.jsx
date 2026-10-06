@@ -9,6 +9,7 @@ import c4 from "../shapeshop/img/shop-admin-edit-product.png";
 import c5 from "../shapeshop/img/shop-admin-orders.png";
 
 import { Trans } from "react-i18next";
+import LiveSiteLink from "src/pages/shapeshop/LiveSiteLink";
 
 export default function ShapeShopSection() {
   return (
@@ -30,13 +31,7 @@ export default function ShapeShopSection() {
           <a href={"/shapeshop/"}>Visit the website here</a>
 
           <br />
-          <a
-            href={"https://shapeshop-aks.eastus.cloudapp.azure.com/"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live site (Azure)
-          </a>
+          <LiveSiteLink />
 
           <br />
           {/*<a href={"https://github.com/oliverwatkins/shape-shop-backend"}>*/}
