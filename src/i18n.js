@@ -26,6 +26,9 @@ const resources = {
             "previous-ss-header": "Shape Shop",
             "previous-ss":
                 `Shape Shop is a complete full stack solution for small and medium sized companies to administer their product catalog. Shape Shop offers a white-label solution, and a "shape" is a placeholder for a product. Variations in color and mood demonstrate how products can be organised with categories and variants.`,
+            "ss-live-site": "Live site (Azure)",
+            "ss-live-offline-note": "ⓘ May be offline — the demo is sometimes switched off to save on cloud costs.",
+            "ss-live-offline-tooltip": "The live demo may be switched off to save on cloud costs. Get in touch if you'd like to see it running.",
             "previous-ic-header": "Iceberg Charts",
             "previous-ic":
                 `Iceberg Charts is an advanced charting library for creating charts in Java. It offers a rich set of charting features including :`,
@@ -93,6 +96,9 @@ const resources = {
             "previous-ss-header": "Shape Shop",
             "previous-ss":
                 `Shape Shop ist eine vollständige Full-Stack-Lösung für kleine und mittlere Unternehmen zur Verwaltung ihres Produktkatalogs. Shape Shop bietet eine White-Label-Lösung, wobei eine „Form“ als Platzhalter für ein Produkt dient. Variationen in Farbe und Stimmung zeigen, wie Produkte mit Kategorien und Varianten organisiert werden können.`,
+            "ss-live-site": "Live-Seite (Azure)",
+            "ss-live-offline-note": "ⓘ Evtl. offline — die Demo wird zeitweise abgeschaltet, um Cloud-Kosten zu sparen.",
+            "ss-live-offline-tooltip": "Die Live-Demo ist möglicherweise abgeschaltet, um Cloud-Kosten zu sparen. Melde dich gern, wenn du sie in Aktion sehen möchtest.",
             "previous-ic-header": "Iceberg Charts",
             "previous-ic": `Iceberg Charts ist eine fortschrittliche Diagrammbibliothek zum Erstellen von Diagrammen in Java. Es bietet eine Vielzahl von Diagrammfunktionen, darunter:`,
             "previous-rc": `Meine Charting-Anwendung ist ein kontinuierliches „Work in Progress“, das zusammen mit einigen Komponenten von Drittanbietern vollständig in React-JS geschrieben wurde <strong> [HINWEIS: Derzeit veraltet] </strong>`,
