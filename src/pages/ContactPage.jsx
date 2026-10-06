@@ -8,8 +8,6 @@ import xingLogo from "../img/xing.svg";
 
 // Web3Forms delivers submissions to the email address this key was registered with.
 const WEB3FORMS_ACCESS_KEY = "16efebb6-ce76-4ef8-94c8-6b97563e5d3f";
-const FALLBACK_EMAIL = "oliver.f.watkins@gmail.com";
-
 export default function ContactPage() {
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
 
@@ -117,9 +115,12 @@ export default function ContactPage() {
           )}
           {status === "error" && (
             <p className="contact-form-status error" role="alert">
-              Sorry, something went wrong sending your message. Please email me
-              directly at{" "}
-              <a href={`mailto:${FALLBACK_EMAIL}`}>{FALLBACK_EMAIL}</a>.
+              Sorry, something went wrong sending your message. Please try
+              again, or reach me on{" "}
+              <a href={"https://www.linkedin.com/in/oliver-watkins-0673b27/"}>
+                LinkedIn
+              </a>
+              .
             </p>
           )}
 
