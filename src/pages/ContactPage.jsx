@@ -51,11 +51,6 @@ export default function ContactPage() {
       <div className="contact-form-container">
         <form onSubmit={handleSubmit}>
           <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
-          <input
-            type="hidden"
-            name="subject"
-            value="New message from the Front Angle contact form"
-          />
           <input type="hidden" name="from_name" value="Front Angle website" />
           {/* Honeypot: bots fill this in, Web3Forms then discards the submission */}
           <input
@@ -66,7 +61,7 @@ export default function ContactPage() {
             autoComplete="off"
           />
 
-          <label htmlFor="name">First Name</label>
+          <label htmlFor="name">Name</label>
           <input
             type="text"
             id="name"
@@ -75,12 +70,14 @@ export default function ContactPage() {
             placeholder="Your name.."
           />
 
-          <label htmlFor="lname">Last Name</label>
+          {/* Web3Forms uses this field as the subject line of the email */}
+          <label htmlFor="subject">Subject</label>
           <input
             type="text"
-            id="lname"
-            name="lastname"
-            placeholder="Your last name.."
+            id="subject"
+            name="subject"
+            required
+            placeholder="What is it about?"
           />
 
           <label htmlFor="email">Email</label>
