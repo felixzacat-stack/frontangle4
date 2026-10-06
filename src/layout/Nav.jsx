@@ -201,22 +201,6 @@ function CommonMenuItems(props) {
         {/*    Contact*/}
         {/*</Link>*/}
       </li>
-
-      <li className={ne + " " + props.type + "-menu-item "}>
-        {/*<Link to="https://oliver-watkins.art/" className={props.contactClassisActive}>*/}
-        {/*    Art*/}
-        {/*</Link>*/}
-
-        <a href="https://oliver-watkins.art/" className={""}>
-          ...art
-        </a>
-      </li>
-
-      {/*<li className={"navigation-element art "}>*/}
-      {/*    <a href="https://oliver-watkins.art/" className={""}>*/}
-      {/*        art*/}
-      {/*    </a>*/}
-      {/*</li>*/}
     </>
   );
 }
