@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 
 import "./contactPage.scss";
 // import {useTranslation} from 'react-i18next';
@@ -6,12 +6,31 @@ import "./contactPage.scss";
 import linkedInLogo from "../img/link-linkedin.png";
 import xingLogo from "../img/xing.svg";
 
+// Web3Forms delivers submissions to the email address this key was registered with.
+const WEB3FORMS_ACCESS_KEY = "16efebb6-ce76-4ef8-94c8-6b97563e5d3f";
+const FALLBACK_EMAIL = "oliver.f.watkins@gmail.com";
+
 export default function ContactPage() {
-  const handleSubmit = (e) => {
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(
-      "Currently the contact form is broken and I am working on fixing it. In the meantime please email me at oliver.f.watkins@gmail.com",
-    );
+    const form = e.target;
+    setStatus("sending");
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form),
+      });
+      const result = await response.json();
+      if (!result.success) throw new Error(result.message);
+      form.reset();
+      setStatus("sent");
+    } catch (err) {
+      console.error("Contact form submission failed", err);
+      setStatus("error");
+    }
   };
 
   return (
@@ -32,20 +51,31 @@ export default function ContactPage() {
         <div className="contact-page-image"> </div>
       </div>
       <div className="contact-form-container">
-        <form
-          // action="https://api.web3forms.com/submit"
-          onSubmit={handleSubmit}
-        >
-          {/*16efebb6-ce76-4ef8-94c8-6b97563e5d3f*/}
+        <form onSubmit={handleSubmit}>
+          <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
           <input
             type="hidden"
-            name="access_key"
-            value="16efebb6-ce76-4ef8-94c8-6b97563e5d3f"
+            name="subject"
+            value="New message from the Front Angle contact form"
+          />
+          <input type="hidden" name="from_name" value="Front Angle website" />
+          {/* Honeypot: bots fill this in, Web3Forms then discards the submission */}
+          <input
+            type="checkbox"
+            name="botcheck"
+            style={{ display: "none" }}
+            tabIndex={-1}
+            autoComplete="off"
           />
 
           <label htmlFor="name">First Name</label>
-
-          <input type="text" name="name" required placeholder="Your name.." />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your name.."
+          />
 
           <label htmlFor="lname">Last Name</label>
           <input
@@ -55,33 +85,50 @@ export default function ContactPage() {
             placeholder="Your last name.."
           />
 
-          <label htmlFor="country">Country</label>
-          <select id="country" name="country">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-          </select>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="So I can reply to you.."
+          />
 
-          <label htmlFor="subject">Subject</label>
+          <label htmlFor="message">Message</label>
           <textarea
-            id="subject"
-            name="subject"
+            id="message"
+            name="message"
+            required
             placeholder="Write something.."
             style={{ height: "200px" }}
           />
+
           <input
-            type="hidden"
-            name="redirect"
-            value="https://web3forms.com/success"
+            type="submit"
+            value={status === "sending" ? "Sending…" : "Submit"}
+            disabled={status === "sending"}
           />
-          <input type="submit" value="Submit" />
+
+          {status === "sent" && (
+            <p className="contact-form-status success" role="status">
+              Thanks — your message has been sent. I&apos;ll get back to you
+              soon.
+            </p>
+          )}
+          {status === "error" && (
+            <p className="contact-form-status error" role="alert">
+              Sorry, something went wrong sending your message. Please email me
+              directly at{" "}
+              <a href={`mailto:${FALLBACK_EMAIL}`}>{FALLBACK_EMAIL}</a>.
+            </p>
+          )}
 
           <div className={"contact-page-links"}>
             <a href={"https://www.linkedin.com/in/oliver-watkins-0673b27/"}>
-              <img src={xingLogo} alt="Linked in" />
+              <img src={linkedInLogo} alt="LinkedIn" />
             </a>
             <a href={"https://www.xing.com/profile/Oliver_Watkins2/cv"}>
-              <img src={linkedInLogo} alt="Xing" />
+              <img src={xingLogo} alt="Xing" />
             </a>
           </div>
         </form>

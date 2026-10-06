@@ -63,7 +63,7 @@
   background: #ccc;
 
   padding: 20px;
-  input[type=text], select, textarea {
+  input[type=text], input[type=email], textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */
     border: 1px solid #ccc; /* Gray border */
@@ -87,6 +87,28 @@
   /* When moving the mouse over the submit button, add a darker green color */
   input[type=submit]:hover {
     background-color: #45a049;
+  }
+
+  input[type=submit]:disabled {
+    opacity: 0.6;
+    cursor: wait;
+  }
+
+  .contact-form-status {
+    margin-top: 1rem;
+    padding: 12px;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .contact-form-status.success {
+    background-color: #e3f5ec;
+    color: #035c3b;
+  }
+
+  .contact-form-status.error {
+    background-color: #fbe9e9;
+    color: #8a1c1c;
   }
 }
 
