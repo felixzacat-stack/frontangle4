@@ -1,14 +1,20 @@
 import { useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 import "./contactPage.scss";
-// import {useTranslation} from 'react-i18next';
 
-import linkedInLogo from "../img/link-linkedin.png";
-import xingLogo from "../img/xing.svg";
+import SocialLinks, { LINKEDIN_URL, XING_URL } from "src/pages/SocialLinks";
 
 // Web3Forms delivers submissions to the email address this key was registered with.
 const WEB3FORMS_ACCESS_KEY = "16efebb6-ce76-4ef8-94c8-6b97563e5d3f";
+
+const linkComponents = {
+  linkedin: <a href={LINKEDIN_URL} />,
+  xing: <a href={XING_URL} />,
+};
+
 export default function ContactPage() {
+  const { t } = useTranslation();
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
 
   const handleSubmit = async (e) => {
@@ -34,19 +40,12 @@ export default function ContactPage() {
   return (
     <section className="fa-page contact-page">
       <div className="contact-info paragraph-1">
+        <h1>{t("contact-heading")}</h1>
         <p>
-          If you would like to contact me please fill out the form on the right.
-          You can also contact me via{" "}
-          <a href={"https://www.linkedin.com/in/oliver-watkins-0673b27/"}>
-            Linked In{" "}
-          </a>
-          or{" "}
-          <a href={"https://www.xing.com/profile/Oliver_Watkins2/cv"}> Xing</a>
+          <Trans i18nKey="contact" components={linkComponents} />
         </p>
-
-        {/*todo*/}
-        {/*<Trans i18nKey="contact"/>*/}
-        <div className="contact-page-image"> </div>
+        <SocialLinks />
+        <div className="contact-page-image" />
       </div>
       <div className="contact-form-container">
         <form onSubmit={handleSubmit}>
@@ -61,74 +60,61 @@ export default function ContactPage() {
             autoComplete="off"
           />
 
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">{t("contact-name")}</label>
           <input
             type="text"
             id="name"
             name="name"
             required
-            placeholder="Your name.."
+            placeholder={t("contact-name-placeholder")}
           />
 
           {/* Web3Forms uses this field as the subject line of the email */}
-          <label htmlFor="subject">Subject</label>
+          <label htmlFor="subject">{t("contact-subject")}</label>
           <input
             type="text"
             id="subject"
             name="subject"
             required
-            placeholder="What is it about?"
+            placeholder={t("contact-subject-placeholder")}
           />
 
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">{t("contact-email")}</label>
           <input
             type="email"
             id="email"
             name="email"
             required
-            placeholder="So I can reply to you.."
+            placeholder={t("contact-email-placeholder")}
           />
 
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">{t("contact-message")}</label>
           <textarea
             id="message"
             name="message"
             required
-            placeholder="Write something.."
+            placeholder={t("contact-message-placeholder")}
             style={{ height: "200px" }}
           />
 
           <input
             type="submit"
-            value={status === "sending" ? "Sending…" : "Submit"}
+            value={
+              status === "sending" ? t("contact-sending") : t("contact-submit")
+            }
             disabled={status === "sending"}
           />
 
           {status === "sent" && (
             <p className="contact-form-status success" role="status">
-              Thanks — your message has been sent. I&apos;ll get back to you
-              soon.
+              {t("contact-sent")}
             </p>
           )}
           {status === "error" && (
             <p className="contact-form-status error" role="alert">
-              Sorry, something went wrong sending your message. Please try
-              again, or reach me on{" "}
-              <a href={"https://www.linkedin.com/in/oliver-watkins-0673b27/"}>
-                LinkedIn
-              </a>
-              .
+              <Trans i18nKey="contact-error" components={linkComponents} />
             </p>
           )}
-
-          <div className={"contact-page-links"}>
-            <a href={"https://www.linkedin.com/in/oliver-watkins-0673b27/"}>
-              <img src={linkedInLogo} alt="LinkedIn" />
-            </a>
-            <a href={"https://www.xing.com/profile/Oliver_Watkins2/cv"}>
-              <img src={xingLogo} alt="Xing" />
-            </a>
-          </div>
         </form>
       </div>
     </section>

@@ -1,92 +1,138 @@
 @import "../global";
 
+$contactBlue: #2fa4e7;
+$contactBlueDark: #1d9ce5;
+$contactBorder: #cfd4d8;
 
 .contact-page {
-  //border: 5px solid purple;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  gap: 3rem;
+  padding: 2.5rem 3rem;
 }
 
-.contact-page > * { flex: 1; } //makes them all equal width
+.contact-page > * { flex: 1; min-width: 0; } //makes them all equal width
 
 .contact-info {
-  p {
-    padding: 2rem 2rem 2rem 2rem;
-    margin-top: 0rem;
-    //font-size: 26px;
-    text-align: right;
-  }
-
   font-family: Arial, Helvetica, sans-serif;
   color: $standardTextColor;
+
+  h1 {
+    margin: 0 0 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color: $standardTextColor;
+  }
+
+  p {
+    margin: 0 0 1.5rem;
+    text-align: left;
+  }
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 40px;
+  padding: 0 1rem;
+  border: 1px solid $contactBorder;
+  border-radius: 20px;
+  color: $standardTextColor;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: border-color 0.15s, background-color 0.15s;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  &.linkedin svg { color: #0a66c2; }
+  &.xing svg { color: #026466; }
+
+  &.linkedin:hover { border-color: #0a66c2; background-color: rgba(10, 102, 194, 0.06); }
+  &.xing:hover { border-color: #026466; background-color: rgba(2, 100, 102, 0.06); }
 }
 
 .contact-page-image {
-  //border: 5px solid red;
   background: url("../img/Fotolia_107797505_L.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 
-  margin: auto;
-  min-width: 25vw;
-  max-width: 25vw;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
   aspect-ratio: 3 / 2;
 
   -webkit-mask-image: url(../img/splatter.svg);
   mask-image: url(../img/splatter.svg);
-  -webkit-mask-size: cover;
+  -webkit-mask-size: contain;
+  mask-size: contain;
   -webkit-mask-repeat: no-repeat;
-  mask-size: cover;
-
-  -webkit-mask-position: 100px -65px;
-  mask-position: 100px -65px;
-}
-
-
-.contact-page-links {
-  //border: 5px solid blue;
-  display: flex;
-  justify-content: flex-end;
-}
-.contact-page-links img{
-  //border: 5px solid pink;
-  width: 100px;
-  margin: 1rem 1rem 1rem 1rem;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
 .contact-form-container {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 3rem;
+  border-left: 1px solid #e3e6e8;
 
-  /* Add a background color and some padding around the form */
-  border-radius: 5px;
-  //background-color: #f2f2f2;
-  background: #ccc;
-
-  padding: 20px;
-  input[type=text], input[type=email], textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $standardTextColor;
   }
 
-  /* Style the submit button with a specific background color etc */
+  input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid $contactBorder;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical; // only allow vertical resizing of the textarea
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  input[type=text]:focus, input[type=email]:focus, textarea:focus {
+    outline: none;
+    border-color: $contactBlue;
+    box-shadow: 0 0 0 3px rgba(47, 164, 231, 0.2);
+  }
+
   input[type=submit] {
-    background-color: #04AA6D;
+    background-color: $contactBlue;
     color: white;
-    padding: 12px 20px;
+    padding: 12px 28px;
     border: none;
     border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
   }
 
-  /* When moving the mouse over the submit button, add a darker green color */
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: $contactBlueDark;
+  }
+
+  input[type=submit]:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 164, 231, 0.35);
   }
 
   input[type=submit]:disabled {
@@ -98,7 +144,6 @@
     margin-top: 1rem;
     padding: 12px;
     border-radius: 4px;
-    font-family: Arial, Helvetica, sans-serif;
   }
 
   .contact-form-status.success {
@@ -116,12 +161,26 @@
 @media only screen and (max-width: $breakpoint-width-tablet) {
   .contact-page {
     flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
   }
 
-  //kill image
   .contact-page-image {
-    max-width: 0.0px;
-    width: 0.0px;
-    min-width: 0.0px;
+    max-width: 480px;
+  }
+
+  .contact-form-container {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-width-phone) {
+  .contact-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-form-container input[type=submit] {
+    width: 100%;
   }
 }

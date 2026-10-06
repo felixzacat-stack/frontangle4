@@ -65,9 +65,20 @@ const resources = {
             "services-coaching-4":  "Suggesting refactoring candidatesn",
 
 
-            "contact": `If you would like to contact me please fill out the form on the right. You can also
-                        contact me via <a href='https://www.linkedin.com/in/oliver-watkins-0673b27/'>Linked In </a>
-                        or <a href='https://www.xing.com/profile/Oliver_Watkins2/cv'> Xing</a>`
+            "contact-heading": "Get in touch",
+            "contact": "If you would like to contact me please fill out the form on the right. You can also contact me via <linkedin>LinkedIn</linkedin> or <xing>Xing</xing>.",
+            "contact-name": "Name",
+            "contact-name-placeholder": "Your name..",
+            "contact-subject": "Subject",
+            "contact-subject-placeholder": "What is it about?",
+            "contact-email": "Email",
+            "contact-email-placeholder": "So I can reply to you..",
+            "contact-message": "Message",
+            "contact-message-placeholder": "Write something..",
+            "contact-submit": "Submit",
+            "contact-sending": "Sending…",
+            "contact-sent": "Thanks — your message has been sent. I'll get back to you soon.",
+            "contact-error": "Sorry, something went wrong sending your message. Please try again, or reach me on <linkedin>LinkedIn</linkedin>."
         }
     },
     de: {
@@ -131,11 +142,20 @@ const resources = {
             "services-coaching-3":  "Analyse vorhandener Code und dependency analysis",
             "services-coaching-4":  "Vorschläge für Refactoring-Kandidaten",
 
-            "contact":
-
-                `Wenn Sie mich kontaktieren möchten, füllen Sie bitte das Formular auf der rechten Seite aus. Sie können mich auch über 
-<a href="https://www.linkedin.com/in/oliver-watkins-0673b27/?originalSubdomain=de">Linked In</a>
- oder Xing kontaktieren`
+            "contact-heading": "Kontakt",
+            "contact": "Wenn Sie mich kontaktieren möchten, füllen Sie bitte das Formular auf der rechten Seite aus. Sie können mich auch über <linkedin>LinkedIn</linkedin> oder <xing>Xing</xing> erreichen.",
+            "contact-name": "Name",
+            "contact-name-placeholder": "Ihr Name..",
+            "contact-subject": "Betreff",
+            "contact-subject-placeholder": "Worum geht es?",
+            "contact-email": "E-Mail",
+            "contact-email-placeholder": "Damit ich Ihnen antworten kann..",
+            "contact-message": "Nachricht",
+            "contact-message-placeholder": "Ihre Nachricht..",
+            "contact-submit": "Senden",
+            "contact-sending": "Wird gesendet…",
+            "contact-sent": "Vielen Dank — Ihre Nachricht wurde gesendet. Ich melde mich in Kürze bei Ihnen.",
+            "contact-error": "Leider ist beim Senden Ihrer Nachricht ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie mich über <linkedin>LinkedIn</linkedin>."
 
         }
     }
