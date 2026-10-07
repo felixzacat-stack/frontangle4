@@ -1,95 +1,45 @@
-import "./page.scss";
-import "./previousWorkPage.scss";
+import "src/pages/page.scss";
+import "src/pages/previousWorkPage.scss";
 
-import ShapeShopSection from "./prevworkSections/ShapeShopSection";
-import { Trans, useTranslation } from "react-i18next";
-import IcebergChartsSection from "./prevworkSections/IcebergChartsSection";
-import ReactChartsSection from "./prevworkSections/ReactChartsSection";
-import BlogSection from "./prevworkSections/BlogSection";
-import { InView } from "react-intersection-observer";
-// SnakeThing background disabled - uncomment to re-enable (see wrapper below)
-// import SnakeThing from "./snakething/SnakeThing";
-import useWindowDimensions from "../useWindowDimension";
-import ArtGallerySection from "./prevworkSections/ArtGallerySection";
+import { Trans } from "react-i18next";
+import { useInView } from "react-intersection-observer";
+import ShapeShopSection from "src/pages/prevworkSections/ShapeShopSection";
+import IcebergChartsSection from "src/pages/prevworkSections/IcebergChartsSection";
+import ArtGallerySection from "src/pages/prevworkSections/ArtGallerySection";
+import BlogSection from "src/pages/prevworkSections/BlogSection";
+
+const sections = [
+  { id: "shapeshop", Component: ShapeShopSection },
+  { id: "icebergcharts", Component: IcebergChartsSection },
+  { id: "artgallery", Component: ArtGallerySection },
+  { id: "blog", Component: BlogSection },
+];
+
+// Fades a section in the first time it scrolls into view, then leaves it alone.
+function Reveal({ id, children }) {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
+  return (
+    <section
+      ref={ref}
+      id={id}
+      className={"prev-section reveal" + (inView ? " visible" : "")}
+    >
+      {children}
+    </section>
+  );
+}
 
 export default function PreviousWorkPage() {
-  const { width } = useWindowDimensions();
-  const { i18n } = useTranslation();
   return (
-    <section className="fa-page previous-work ">
+    <section className="fa-page previous-work">
       <section className="previous-work-top paragraph-1">
         <Trans i18nKey="previous-blurb" />
       </section>
-      {/* SnakeThing background disabled - swap this <> for
-          <SnakeThing parentWidht={width} snakeWidth={12} x1={200} x2={400}> to re-enable */}
-      <>
-        <InView>
-          {({ inView, ref }) => {
-            return (
-              <section
-                ref={ref}
-                id="shapeshop"
-                className={"prev-section left " + (inView ? "show" : "hidden")}
-              >
-                <ShapeShopSection align={"left"} />
-              </section>
-            );
-          }}
-        </InView>
-        <InView>
-          {({ inView, ref }) => {
-            //TODO get intersection ratio to work
-            // let showMe = false;
-            //
-            // if (entry && (entry.intersectionRatio > 0.5))
-            //     showMe = true;
-
-            return (
-              <section
-                ref={ref}
-                id="icebergcharts"
-                className={"prev-section right " + (inView ? "show" : "hidden")}
-              >
-                <IcebergChartsSection align={"right"} />
-              </section>
-            );
-          }}
-        </InView>
-
-        <InView>
-          {({ inView, ref }) => (
-            <section
-              ref={ref}
-              id="artgallery"
-              className={"prev-section " + (inView ? "show" : "hidden")}
-            >
-              <ArtGallerySection />
-            </section>
-          )}
-        </InView>
-
-        <InView>
-          {({ inView, ref }) => (
-            <section
-              ref={ref}
-              className={"prev-section right " + (inView ? "show" : "hidden")}
-            >
-              <ReactChartsSection />
-            </section>
-          )}
-        </InView>
-
-        <InView>
-          {({ inView, ref }) => (
-            <section
-              ref={ref}
-              className={"prev-section " + (inView ? "show" : "hidden")}
-            >
-              <BlogSection align={"right"} />
-            </section>
-          )}
-        </InView>
-      </>
+      {sections.map(({ id, Component }) => (
+        <Reveal key={id} id={id}>
+          <Component />
+        </Reveal>
+      ))}
     </section>
   );
 }

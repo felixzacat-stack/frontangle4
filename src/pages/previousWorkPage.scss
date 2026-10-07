@@ -1,212 +1,159 @@
 @import "../global";
 
-$imgChartWidthN: 500px;
-$imgChartWidthT: 400px;
-$imgChartWidthP: 300px;
-
 .previous-work.fa-page {
   background: white;
   z-index: -3;
 }
 
 .previous-work {
-  .hidden {
-    .previous-work-description {
-      opacity: 0;
-      transition: all 1s;
-      filter: blur(5px);
-      transform: translateX(-100px);
-    }
-    .boxy{
-      opacity: 1;
-      transition: all 1s;
-      filter: blur(5px);
-      transform: translateX(-100px);
-    }
-  }
-  .show {
-    .previous-work-description {
-      //border: 5px solid green;
-      background-color: white;
-      z-index: 2;
-      opacity: 1;
-      transition: all 2s;
-      filter: blur(0);
-      transform: translateX(0);
-    }
-
-    .boxy{
-
-      z-index: 2;
-      //border: 5px solid green;
-      opacity: 1;
-      transition: all 1s;
-      filter: blur(0);
-      transform: translateX(0);
-      background-color: white;
-    }
-  }
-
   padding: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $standardTextColor;
 
-  .previous-work-top {
-    p {
-      padding-top: 0rem;
-      margin-top: 0rem;
-      text-align: right;
-    }
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    color: $standardTextColor;
-    margin-bottom: 200px;
-  }
-
-  .prev-section.left {
-    //border: 5px solid green;
-    .previous-work-description {
-      ul {
-        direction: ltr;
-      }
-      p {
-        text-align: left;
-      }
-    }
-  }
-  .prev-section.right {
-    .previous-work-description {
-      ul {
-        direction: ltr;
-      }
-      p {
-        text-align: left;
-      }
-    }
-    flex-direction: row-reverse;
-  }
+  .previous-work-top,
   .prev-section {
-    z-index: 3;
-    display: flex;
-    justify-content: flex-end;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .previous-work-description {
-      padding: 0rem 2rem 2rem 2rem;
-      p {
-        padding-top: 0rem;
-        margin-top: 0rem;
-        text-align: left;
-      }
-      font-family: Arial, Helvetica, sans-serif;
+  // Lead paragraph: larger and darker than the project text, with an accent bar
+  .previous-work-top {
+    margin-bottom: 3rem;
+    padding-left: 1.5rem;
+    border-left: 4px solid #1995dc; // $navSelectedColor in layout/nav.scss
+    font-size: 1.35rem;
+    line-height: 1.6;
+    color: #3f4549;
+
+    p {
+      margin: 0 0 0.75rem;
+    }
+    p:last-child {
+      margin-bottom: 0;
+      font-size: 1.1rem;
       color: $standardTextColor;
     }
   }
-}
 
-.image-gallery {
-  width : $imgChartWidthN;
-  //border: 5px solid orange;
-  background-color: white;
-}
-
-//NORMAL
-@media only screen and (min-width: $breakpoint-width-tablet) {
-//and (max-width: $breakpoint-width-normal) {
-
-  .image-gallery {
-    //max-height : 100px;
-    width : $imgChartWidthN;
-    //border: 3px dashed blue;
-  }
-  #react-charts-img {
-    width : $imgChartWidthN;
-    height: 100%;
-  }
-
-  #art-gallery-img {
-    width : 700px;
-    height: 100%;
-  }
-
-  #blog-img {
-    width : $imgChartWidthN;
-    height: 100%;
-  }
+  // Each project: text and media in two equal columns, media alternating sides
   .prev-section {
-    //border: 3px dashed blue;
-    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 3rem 0;
+    border-top: 1px solid #eee;
+
+    // odd because the intro (.previous-work-top) is the first <section>
+    &:nth-of-type(odd) .prev-media {
+      order: -1;
+    }
   }
-  .prev-section-top {
-    margin-bottom: 0px;
+
+  .previous-work-description {
+    h2 {
+      margin-top: 0;
+    }
+    p {
+      margin-top: 0;
+    }
+    ul {
+      margin: 0 0 1rem;
+    }
   }
-  .previous-work {
-    .prev-section.right,
-    .prev-section {
-      //border: 5px solid pink;
-      display: flex;
-      justify-content: flex-end;
+
+  .prev-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .prev-media {
+    width: 100%;
+    max-width: 520px;
+    justify-self: center;
+
+    > img,
+    .fade-carousel {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      border-radius: 6px;
+    }
+
+    > img {
+      object-fit: cover;
+      object-position: top;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  // Images stacked on top of each other; only the active one is opaque
+  .fade-carousel {
+    position: relative;
+    overflow: hidden;
+    background: white;
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    img.active {
+      opacity: 1;
+    }
+  }
+
+  // Fade in once when scrolled into view (see Reveal in PreviousWorkPage.jsx)
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
     }
   }
 }
 
-//TABLET
-@media only screen and (min-width: $breakpoint-width-phone) and (max-width: $breakpoint-width-tablet) {
-
-  .image-gallery {
-    //max-height : 100px;
-    width : $imgChartWidthT;
-    //border: 3px dashed blue;
-  }
-  #react-charts-img {
-    width : $imgChartWidthT;
-    height: 100%;
-  }
-  #blog-img {
-    width : $imgChartWidthT;
-    height: 100%;
-  }
+// TABLET + PHONE: single column, media above text
+@media only screen and (max-width: $breakpoint-width-tablet) {
   .previous-work {
-    .prev-section.right,
-    .prev-section {
-      flex-direction: column;
-      justify-content: normal;
+    padding: 1rem;
+
+    .previous-work-top {
+      padding-left: 1rem;
+      font-size: 1.15rem;
+
+      p:last-child {
+        font-size: 1rem;
+      }
     }
-  }
-}
 
-//PHONE
-@media only screen and (max-width: $breakpoint-width-phone) {
-  .previous-work {
-    //border: 3px dashed blue;
-    .prev-section.right,
     .prev-section {
-      //border: 3px dashed blue;
-      flex-direction: column;
-      justify-content: normal;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 2rem 0;
+
+      .prev-media {
+        order: -1;
+      }
     }
-  }
-  .prev-section {
-    //border: 3px dashed blue;
-    margin-bottom: 60px;
-  }
-  .prev-section-top {
-    margin-bottom: 60px;
-  }
-
-  .boxy {
-    //border: 3px dashed blue;
-  }
-
-  .image-gallery {
-    //max-height : 100px;
-    //width : $imgChartWidthT;
-    width : $imgChartWidthP;
-    //border: 3px dashed blue;
-  }
-  #react-charts-img {
-    width : $imgChartWidthP;
-    height: 100%;
-  }
-  #blog-img {
-    width : $imgChartWidthP;
-    height: 100%;
   }
 }

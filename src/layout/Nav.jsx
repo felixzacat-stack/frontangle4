@@ -184,7 +184,7 @@ function CommonMenuItems(props) {
         <SubMenu
           type={props.type}
           items={[
-            { to: "/services#frontend", label: "Front End Developement" },
+            { to: "/services#frontend", label: "Front End Development" },
             { to: "/services#systems", label: "Systems Analysis and Databases" },
             { to: "/services#coaching", label: "Coaching" },
           ]}
