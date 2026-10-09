@@ -10,12 +10,38 @@
   h3 {
     margin-top: 1em;
   }
+
+  .screenshot-group {
+    margin-bottom: 1.5em;
+
+    h3 {
+      margin-top: 1.25em;
+    }
+
+    h4 {
+      margin-top: 0.75em;
+      font-size: 0.95em;
+      font-weight: 600;
+      color: #666666;
+    }
+  }
 }
 
 .screenshot-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 15px;
+}
+
+.screenshot-figure {
+  margin: 0;
+}
+
+.screenshot-caption {
+  margin-top: 6px;
+  font-size: 0.85em;
+  line-height: 1.35;
+  color: #555555;
 }
 
 .screenshot-image {

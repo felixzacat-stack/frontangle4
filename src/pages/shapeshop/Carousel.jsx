@@ -13,7 +13,7 @@ export default function Carousel({ images }) {
           <button type="button" className="carousel-arrow carousel-arrow-prev" onClick={() => go(-1)} aria-label="Previous screenshot">
             &#8249;
           </button>
-          <img className="carousel-image" src={images[index].src} alt={images[index].alt} />
+          <img className="carousel-image" src={images[index].src} alt={images[index].alt} title={images[index].alt} />
           <button type="button" className="carousel-arrow carousel-arrow-next" onClick={() => go(1)} aria-label="Next screenshot">
             &#8250;
           </button>
