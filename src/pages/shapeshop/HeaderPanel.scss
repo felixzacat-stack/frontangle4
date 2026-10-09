@@ -1,3 +1,5 @@
+@import "../../global";
+
 #header-container {
   display: flex;
   flex-wrap: wrap;
@@ -74,6 +76,144 @@
           padding-bottom: 8px;
         }
       }
+    }
+  }
+}
+
+// --- Hamburger menu (below the tablet breakpoint, like the main site's Nav) ---
+
+.navbar .ss-hamburger-item {
+  display: none;
+}
+
+.ss-hamburger-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 52px;
+  height: 50px;
+  padding: 0 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  span {
+    display: block;
+    height: 3px;
+    border-radius: 2px;
+    background: #ffffff;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+.navbar .ss-hamburger-item.active .ss-hamburger-button {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.ss-hamburger-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  li {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.37);
+
+    a {
+      display: block;
+      padding: 10px 16px;
+      color: #1b2a6b;
+      text-decoration: none;
+    }
+
+    &.active {
+      background: #e0e4f2;
+      font-weight: 600;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-width-tablet) {
+  .navbar .ss-hamburger-item {
+    display: block;
+  }
+
+  .navbar .ss-menu-item {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-width-tablet + 1) {
+  .ss-hamburger-menu {
+    display: none;
+  }
+}
+
+// --- Submenus (desktop hover dropdown + indented items in the hamburger) ---
+
+.navbar ul.nav .ss-menu-item {
+  position: relative;
+
+  &:hover .ss-sub-menu,
+  &:focus-within .ss-sub-menu {
+    display: block;
+  }
+}
+
+// Same specificity as the `ul.nav li` rules above (active underline,
+// last-child margin) - declared after them so the dropdown items win.
+.navbar ul.nav .ss-sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #1b2a6b;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+  li {
+    margin-left: 0;
+
+    a {
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 400;
+      white-space: nowrap;
+      background: none;
+      border-bottom: none;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+}
+
+.ss-hamburger-menu .ss-hamburger-sub-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  font-weight: 400;
+
+  li {
+    border-bottom: none;
+    border-top: 1px solid rgba(128, 128, 128, 0.21);
+
+    a {
+      padding: 8px 16px 8px 32px;
+      font-size: 13px;
     }
   }
 }

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./Screenshots.scss";
 
 import shopProducts from "./img/shop-products.png";
@@ -96,9 +97,9 @@ function DeviceGrids({ shots, onSelect, headingLevel }) {
 
 // `groups` optionally splits a category into titled subsections, matched
 // against each shot's `group` field.
-function CategorySection({ title, shots, groups, onSelect }) {
+function CategorySection({ id, title, shots, groups, onSelect }) {
   return (
-    <section className="screenshot-category">
+    <section id={id} className="screenshot-category">
       <h2>{title}</h2>
       {groups ? (
         groups.map((g) => (
@@ -121,6 +122,28 @@ const SHOP_GROUPS = [
 
 export default function Screenshots() {
   const [lightboxShot, setLightboxShot] = useState(null);
+  const location = useLocation();
+
+  // Scroll to #shop / #admin (the header's Screenshots submenu). Waits for
+  // the screenshots above the target to load first - their heights aren't
+  // known until then, so scrolling earlier lands in the wrong place.
+  useEffect(() => {
+    const target = location.hash && document.getElementById(location.hash.slice(1));
+    if (!target) return;
+    let cancelled = false;
+    const pending = [...document.querySelectorAll(".screenshot-image")]
+      .filter((img) => !img.complete)
+      .map((img) => new Promise((resolve) => {
+        img.addEventListener("load", resolve, { once: true });
+        img.addEventListener("error", resolve, { once: true });
+      }));
+    Promise.all(pending).then(() => {
+      if (!cancelled) target.scrollIntoView({ block: "start" });
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [location.hash, location.key]);
 
   useEffect(() => {
     if (!lightboxShot) return;
@@ -136,8 +159,8 @@ export default function Screenshots() {
 
   return (
     <>
-      <CategorySection title="Shop" shots={shopShots} groups={SHOP_GROUPS} onSelect={setLightboxShot} />
-      <CategorySection title="Admin" shots={adminShots} onSelect={setLightboxShot} />
+      <CategorySection id="shop" title="Shop" shots={shopShots} groups={SHOP_GROUPS} onSelect={setLightboxShot} />
+      <CategorySection id="admin" title="Admin" shots={adminShots} onSelect={setLightboxShot} />
 
       {lightboxShot && (
         <div className="screenshot-lightbox" onClick={() => setLightboxShot(null)}>
