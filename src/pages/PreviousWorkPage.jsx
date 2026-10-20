@@ -12,8 +12,8 @@ import BlogSection from "src/pages/prevworkSections/BlogSection";
 const sections = [
   { id: "shapeshop", Component: ShapeShopSection },
   { id: "petsitter", Component: PetsitterSection },
-  { id: "icebergcharts", Component: IcebergChartsSection },
   { id: "artgallery", Component: ArtGallerySection },
+  { id: "icebergcharts", Component: IcebergChartsSection },
   { id: "blog", Component: BlogSection },
 ];
 

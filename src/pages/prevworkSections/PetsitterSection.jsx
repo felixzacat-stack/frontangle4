@@ -25,7 +25,12 @@ export default function PetsitterSection() {
         </ul>
       </div>
       <div className={"prev-media"}>
-        <FadeCarousel images={someInterestingImages} alt={"screenshots of Petsit!"} />
+        <FadeCarousel
+          images={someInterestingImages}
+          interval={4000}
+          delay={1500}
+          alt={"screenshots of Petsit!"}
+        />
       </div>
     </>
   );
