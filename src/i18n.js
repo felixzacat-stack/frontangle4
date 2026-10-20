@@ -29,6 +29,9 @@ const resources = {
             "ss-live-site": "Live site (Azure)",
             "ss-live-offline-note": "ⓘ May be offline — the demo is sometimes switched off to save on cloud costs.",
             "ss-live-offline-tooltip": "The live demo may be switched off to save on cloud costs. Get in touch if you'd like to see it running.",
+            "previous-ps-header": "Petsit!",
+            "previous-ps":
+                `Petsit! is a pet-sitting app (work in progress) that brings pet owners and sitters together on a map. Owners describe themselves and their pets and list the dates they are away; sitters list when they are free. Search by place, radius and a date window to see who nearby needs a sitter or can look after your pets.`,
             "previous-ic-header": "Iceberg Charts",
             "previous-ic":
                 `Iceberg Charts is an advanced charting library for creating charts in Java. It offers a rich set of charting features including:`,
@@ -111,6 +114,9 @@ const resources = {
             "ss-live-site": "Live-Seite (Azure)",
             "ss-live-offline-note": "ⓘ Evtl. offline — die Demo wird zeitweise abgeschaltet, um Cloud-Kosten zu sparen.",
             "ss-live-offline-tooltip": "Die Live-Demo ist möglicherweise abgeschaltet, um Cloud-Kosten zu sparen. Melde dich gern, wenn du sie in Aktion sehen möchtest.",
+            "previous-ps-header": "Petsit!",
+            "previous-ps":
+                `Petsit! ist eine Pet-Sitting-App (in Arbeit), die Tierbesitzer und Tiersitter auf einer Karte zusammenbringt. Besitzer stellen sich und ihre Tiere vor und tragen ein, wann sie verreist sind; Sitter geben an, wann sie Zeit haben. Über Ort, Umkreis und Zeitraum sieht man, wer in der Nähe einen Sitter braucht oder auf die eigenen Tiere aufpassen kann.`,
             "previous-ic-header": "Iceberg Charts",
             "previous-ic": `Iceberg Charts ist eine fortschrittliche Diagrammbibliothek zum Erstellen von Diagrammen in Java. Sie bietet eine Vielzahl von Diagrammfunktionen, darunter:`,
             "previous-rc": `Meine Charting-Anwendung ist ein kontinuierliches „Work in Progress“, das zusammen mit einigen Komponenten von Drittanbietern vollständig in React-JS geschrieben wurde <strong> [HINWEIS: Derzeit veraltet] </strong>`,

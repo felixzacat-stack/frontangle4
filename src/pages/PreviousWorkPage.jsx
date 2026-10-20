@@ -4,12 +4,14 @@ import "src/pages/previousWorkPage.scss";
 import { Trans } from "react-i18next";
 import { useInView } from "react-intersection-observer";
 import ShapeShopSection from "src/pages/prevworkSections/ShapeShopSection";
+import PetsitterSection from "src/pages/prevworkSections/PetsitterSection";
 import IcebergChartsSection from "src/pages/prevworkSections/IcebergChartsSection";
 import ArtGallerySection from "src/pages/prevworkSections/ArtGallerySection";
 import BlogSection from "src/pages/prevworkSections/BlogSection";
 
 const sections = [
   { id: "shapeshop", Component: ShapeShopSection },
+  { id: "petsitter", Component: PetsitterSection },
   { id: "icebergcharts", Component: IcebergChartsSection },
   { id: "artgallery", Component: ArtGallerySection },
   { id: "blog", Component: BlogSection },
