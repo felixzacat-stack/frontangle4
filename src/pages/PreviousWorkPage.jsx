@@ -5,6 +5,7 @@ import { Trans } from "react-i18next";
 import { useInView } from "react-intersection-observer";
 import ShapeShopSection from "src/pages/prevworkSections/ShapeShopSection";
 import PetsitterSection from "src/pages/prevworkSections/PetsitterSection";
+import BerlinIndustrialStoriesSection from "src/pages/prevworkSections/BerlinIndustrialStoriesSection";
 import IcebergChartsSection from "src/pages/prevworkSections/IcebergChartsSection";
 import ArtGallerySection from "src/pages/prevworkSections/ArtGallerySection";
 import BlogSection from "src/pages/prevworkSections/BlogSection";
@@ -15,6 +16,7 @@ const sections = [
   { id: "artgallery", Component: ArtGallerySection },
   { id: "icebergcharts", Component: IcebergChartsSection },
   { id: "blog", Component: BlogSection },
+  { id: "berlinindustrialstories", Component: BerlinIndustrialStoriesSection },
 ];
 
 // Fades a section in the first time it scrolls into view, then leaves it alone.

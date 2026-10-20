@@ -2,12 +2,13 @@ import { useTranslation } from "react-i18next";
 
 export const LIVE_SITE_URL = "https://shapeshop-aks.eastus.cloudapp.azure.com/";
 
-export default function LiveSiteLink({ children }) {
+// Also used for other demos on the same AKS cluster (pass their `href`), which go offline with it.
+export default function LiveSiteLink({ href = LIVE_SITE_URL, children }) {
   const { t } = useTranslation();
   return (
     <>
       <a
-        href={LIVE_SITE_URL}
+        href={href}
         target="_blank"
         rel="noopener noreferrer"
         title={t("ss-live-offline-tooltip")}

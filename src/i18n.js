@@ -32,6 +32,9 @@ const resources = {
             "previous-ps-header": "Petsit!",
             "previous-ps":
                 `Petsit! is a pet-sitting app (work in progress) that brings pet owners and sitters together on a map. Owners describe themselves and their pets and list the dates they are away; sitters list when they are free. Search by place, radius and a date window to see who nearby needs a sitter or can look after your pets.`,
+            "previous-bis-header": "Berlin Industrial Stories",
+            "previous-bis":
+                `Berlin Industrial Stories is the website for a Berlin tour guide who shows people the city's industrial heritage: the suburbs, the factories and the hinterland. It started life as a Substack blog. Visitors can read the stories, book a place on a tour or ask for a private tour, and buy prints, books and t-shirts in the shop. Behind it is an admin screen for writing stories in a rich-text editor and managing tours, dates, bookings and orders, with confirmation emails at every step.`,
             "previous-ic-header": "Iceberg Charts",
             "previous-ic":
                 `Iceberg Charts is an advanced charting library for creating charts in Java. It offers a rich set of charting features including:`,
@@ -117,6 +120,9 @@ const resources = {
             "previous-ps-header": "Petsit!",
             "previous-ps":
                 `Petsit! ist eine Pet-Sitting-App (in Arbeit), die Tierbesitzer und Tiersitter auf einer Karte zusammenbringt. Besitzer stellen sich und ihre Tiere vor und tragen ein, wann sie verreist sind; Sitter geben an, wann sie Zeit haben. Über Ort, Umkreis und Zeitraum sieht man, wer in der Nähe einen Sitter braucht oder auf die eigenen Tiere aufpassen kann.`,
+            "previous-bis-header": "Berlin Industrial Stories",
+            "previous-bis":
+                `Berlin Industrial Stories ist die Website eines Berliner Stadtführers, der das industrielle Erbe der Stadt zeigt: die Vororte, die Fabriken und das Hinterland. Angefangen hat sie als Substack-Blog. Besucher können die Geschichten lesen, einen Platz auf einer Tour buchen oder eine private Tour anfragen und im Shop Drucke, Bücher und T-Shirts kaufen. Dahinter steht ein Admin-Bereich, in dem Geschichten in einem Rich-Text-Editor geschrieben und Touren, Termine, Buchungen und Bestellungen verwaltet werden, mit Bestätigungs-E-Mails bei jedem Schritt.`,
             "previous-ic-header": "Iceberg Charts",
             "previous-ic": `Iceberg Charts ist eine fortschrittliche Diagrammbibliothek zum Erstellen von Diagrammen in Java. Sie bietet eine Vielzahl von Diagrammfunktionen, darunter:`,
             "previous-rc": `Meine Charting-Anwendung ist ein kontinuierliches „Work in Progress“, das zusammen mit einigen Komponenten von Drittanbietern vollständig in React-JS geschrieben wurde <strong> [HINWEIS: Derzeit veraltet] </strong>`,
