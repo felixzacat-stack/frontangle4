@@ -51,6 +51,10 @@ src/
 | `/contact` | ContactPage |
 | `/icharts` | PageLayoutICharts (own layout, nested routes for home/screenshots/codesamples) |
 
+### Redesign prototype (branch `redesign`)
+
+On the `redesign` branch, `/`, `/work`, `/services` and `/contact` render the new site in `src/redesign/` (Layout, pages, `data/projects.js`, `redesign.css`). A floating switcher toggles three design directions (Studio / Terminal / Atelier) via `html[data-design]`, like `caleb-larson/`. Its copy is in `src/redesign/translations.js`, merged into `i18n.js` under the `rd` key. `/main` and `/previous` redirect to the new pages. The old pages are still in `src/pages/` but are no longer routed. `/icharts` and `/shapeshop` are lazy-loaded so their old global SCSS doesn't leak into the new pages.
+
 ### Internationalisation
 
 Translations live **inline in `src/i18n.js`** as JSON objects — there are no separate translation files. Add or edit translations directly in that file. Components consume translations via the `useTranslation()` hook from `react-i18next`. Supported languages: `en`, `de`.

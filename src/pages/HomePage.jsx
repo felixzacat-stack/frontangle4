@@ -3,9 +3,11 @@ import React from "react";
 import './page.scss';
 import './homePage.scss';
 import {Trans, useTranslation} from "react-i18next";
+import { usePageTitle } from "src/redesign/common";
 
 export default function HomePage() {
     const { t } = useTranslation();
+    usePageTitle(null);
     return (
         <section className="fa-page fa-page-home">
             <div className="home-page-info paragraph-1">

@@ -1,5 +1,6 @@
 import i18n from "i18next";
 import {initReactI18next} from "react-i18next";
+import redesign from "src/redesign/translations";
 
 // the translations
 // (tip move them in a JSON file and import them,
@@ -177,11 +178,33 @@ const resources = {
 
 };
 
+for (const lng of Object.keys(redesign)) {
+    resources[lng].translation.rd = redesign[lng];
+}
+
+// Remember the visitor's language and keep <html lang> in step with it.
+const savedLanguage = () => {
+    try {
+        return localStorage.getItem("lang") || "en";
+    } catch {
+        return "en";
+    }
+};
+
+i18n.on("languageChanged", (lng) => {
+    document.documentElement.lang = lng;
+    try {
+        localStorage.setItem("lang", lng);
+    } catch {
+        // private mode etc.: just don't remember it
+    }
+});
+
 i18n
     .use(initReactI18next) // passes i18n down to react-i18next
     .init({
         resources,
-        lng: "en", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
+        lng: savedLanguage(), // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
         // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
         // if you're using a language detector, do not define the lng option
 

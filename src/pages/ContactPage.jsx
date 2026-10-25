@@ -1,12 +1,9 @@
-import { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import "./contactPage.scss";
 
 import SocialLinks, { LINKEDIN_URL, XING_URL } from "src/pages/SocialLinks";
-
-// Web3Forms delivers submissions to the email address this key was registered with.
-const WEB3FORMS_ACCESS_KEY = "16efebb6-ce76-4ef8-94c8-6b97563e5d3f";
+import useContactForm, { WEB3FORMS_ACCESS_KEY } from "src/pages/useContactForm";
 
 const linkComponents = {
   linkedin: <a href={LINKEDIN_URL} />,
@@ -15,27 +12,7 @@ const linkComponents = {
 
 export default function ContactPage() {
   const { t } = useTranslation();
-  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    setStatus("sending");
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: new FormData(form),
-      });
-      const result = await response.json();
-      if (!result.success) throw new Error(result.message);
-      form.reset();
-      setStatus("sent");
-    } catch (err) {
-      console.error("Contact form submission failed", err);
-      setStatus("error");
-    }
-  };
+  const { status, handleSubmit } = useContactForm();
 
   return (
     <section className="fa-page contact-page">
