@@ -6,7 +6,14 @@ import "./redesign.css";
 
 import DesignSwitcher from "src/redesign/DesignSwitcher";
 import logo from "src/img/FrontAngle_For_Site.png";
+import ukFlag from "src/img/united-kingdom-flag-icon.svg";
+import deFlag from "src/img/germany-flag-icon.svg";
 import { LINKEDIN_URL, XING_URL } from "src/pages/SocialLinks";
+
+const languages = [
+  ["en", ukFlag, "English"],
+  ["de", deFlag, "Deutsch"],
+];
 
 const navItems = [
   ["/", "home"],
@@ -51,14 +58,17 @@ export default function Layout() {
               </NavLink>
             ))}
             <div className="rd-lang" role="group" aria-label="Language">
-              {["en", "de"].map((lng) => (
+              {languages.map(([lng, flag, name]) => (
                 <button
                   key={lng}
                   type="button"
                   aria-pressed={i18n.resolvedLanguage === lng}
+                  aria-label={name}
+                  title={name}
+                  lang={lng}
                   onClick={() => i18n.changeLanguage(lng)}
                 >
-                  {lng.toUpperCase()}
+                  <img src={flag} alt="" />
                 </button>
               ))}
             </div>
