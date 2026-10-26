@@ -11,7 +11,7 @@ const en = {
   },
   hero: {
     hello: "Hi, I'm Oliver.",
-    eyebrow: "Freelance software developer · Munich",
+    eyebrow: "Freelance software developer · Germany",
     title: "I build web applications, from the database to the browser.",
     lede: "Senior full-stack developer, architect and coach. Freelancing in Germany since 2010, focused on React, TypeScript and Spring Boot on Azure.",
     ctaWork: "See my work",
@@ -85,6 +85,11 @@ const en = {
     web2: "Spring Boot and Node REST and GraphQL APIs",
     web3: "Test automation with React Testing Library, Jest and Playwright",
     web4: "Deployment on Azure: Static Web Apps, Kubernetes, Blob Storage",
+    aiTitle: "AI-assisted development",
+    ai: "Shipping faster with AI coding agents such as Claude Code, with a senior developer still in charge of the design and the review.",
+    ai1: "Agentic coding with Claude Code: planning, implementing, reviewing and deploying changes across the full stack",
+    ai2: "Setting up projects for AI agents: commands, skills and hooks",
+    ai3: "Connecting agents to tools through MCP, such as browser automation to test UIs end to end",
     dataTitle: "Architecture and database design",
     data: "The database is the core of every application. It has to scale and stay robust.",
     data1: "Data modelling with entity-relationship diagrams",
@@ -100,10 +105,10 @@ const en = {
     stackTitle: "Tools I use",
   },
   contact: {
-    based: "Based in Munich",
+    based: "Based in Germany",
   },
   footer: {
-    rights: "Oliver Watkins, Munich",
+    rights: "Oliver Watkins, Germany",
   },
 };
 
@@ -117,7 +122,7 @@ const de = {
   },
   hero: {
     hello: "Hallo, ich bin Oliver.",
-    eyebrow: "Freiberuflicher Softwareentwickler · München",
+    eyebrow: "Freiberuflicher Softwareentwickler · Deutschland",
     title: "Ich entwickle Webanwendungen, von der Datenbank bis zum Browser.",
     lede: "Senior Full-Stack-Entwickler, Architekt und Coach. Seit 2010 freiberuflich in Deutschland, mit Schwerpunkt auf React, TypeScript und Spring Boot in der Azure Cloud.",
     ctaWork: "Meine Projekte",
@@ -191,6 +196,11 @@ const de = {
     web2: "REST- und GraphQL-APIs mit Spring Boot und Node",
     web3: "Testautomatisierung mit React Testing Library, Jest und Playwright",
     web4: "Deployment auf Azure: Static Web Apps, Kubernetes, Blob Storage",
+    aiTitle: "KI-gestützte Entwicklung",
+    ai: "Schneller liefern mit KI-Coding-Agenten wie Claude Code, wobei ein Senior-Entwickler Design und Review in der Hand behält.",
+    ai1: "Agentisches Programmieren mit Claude Code: Änderungen über den gesamten Stack planen, umsetzen, prüfen und deployen",
+    ai2: "Projekte für KI-Agenten einrichten: Commands, Skills und Hooks",
+    ai3: "Agenten über MCP mit Werkzeugen verbinden, z. B. Browser-Automatisierung für End-to-End-Tests der Oberfläche",
     dataTitle: "Architektur und Datenbankdesign",
     data: "Die Datenbank ist das Herz jeder Anwendung. Sie muss skalieren und robust bleiben.",
     data1: "Datenmodellierung mit Entity-Relationship-Diagrammen",
@@ -206,10 +216,10 @@ const de = {
     stackTitle: "Meine Werkzeuge",
   },
   contact: {
-    based: "Mit Sitz in München",
+    based: "Mit Sitz in Deutschland",
   },
   footer: {
-    rights: "Oliver Watkins, München",
+    rights: "Oliver Watkins, Deutschland",
   },
 };
 

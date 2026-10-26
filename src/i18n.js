@@ -12,7 +12,7 @@ const resources = {
 
             "home-blurb": `
                 <p>Hi! I'm Oliver</p>
-                <p>Munich based Senior Software Developer, Architect, Team Lead, Coach.</p>
+                <p>Germany based Senior Software Developer, Architect, Team Lead, Coach.</p>
                 <p>I started in year 2000 as a Java Developer and have developed strong experience in database design, software architecture and requirements engineering.</p>
                 <p>Since 2010 I have been freelancing in Germany and have worked across a broad spectrum of companies. Although I am a full stack developer, I am strongly focussed on front end development, and have spent a good part of the last ten years working on the web frontend with technologies such as reactjs and node.</p>
                 <p>On the technical side of things I am a strong adherent of clean code, refactoring, testing with high test coverage (both front end and backend). Mantras that I live by when developing software are "keep it simple" and "less is more" </p>            
@@ -95,7 +95,7 @@ const resources = {
 
             "home-blurb": `
                 <p>Hallo! Ich bin Oliver</p>
-                <p>Münchner Senior Softwareentwickler, Architekt, Teamleiter, Coach.</p>
+                <p>In Deutschland ansässiger Senior Softwareentwickler, Architekt, Teamleiter, Coach.</p>
                 <p> Ich habe im Jahr 2000 als Java-Entwickler angefangen und habe umfangreiche Erfahrungen in den Bereichen Datenbankdesign, Softwarearchitektur und Requirements Engineering gesammelt.</p>
                 <p>Seit 2010 bin ich freiberuflich in Deutschland tätig und habe in einem breiten Spektrum von Unternehmen gearbeitet. Obwohl ich ein Full-Stack-Entwickler bin, konzentriere ich mich stark auf die Frontend-Entwicklung und habe einen guten Teil der letzten zehn Jahre damit verbracht, am Web-Frontend mit Technologien wie Reactjs und Node zu arbeiten.</p>
                 <p> Auf der technischen Seite bin ich ein starker Anhänger von Clean Code, Refactoring, Testing mit hoher Testabdeckung (sowohl Frontend als auch Backend). 

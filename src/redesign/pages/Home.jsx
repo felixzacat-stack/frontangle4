@@ -6,6 +6,7 @@ import { ButtonLink, Chips, CtaBand, Eyebrow, Reveal, usePageTitle } from "src/r
 
 const services = [
   ["webTitle", "web"],
+  ["aiTitle", "ai"],
   ["dataTitle", "data"],
   ["coachTitle", "coach"],
 ];
@@ -50,7 +51,7 @@ export default function Home() {
               </div>
               <pre className="rd-term__body">
                 <b>$</b> whoami{"\n"}
-                <i>oliver watkins · senior full-stack developer · munich</i>
+                <i>oliver watkins · senior full-stack developer · germany</i>
                 {"\n"}
                 <b>$</b> cat stack.txt{"\n"}
                 <i>React · TypeScript · Spring Boot · MySQL · Azure</i>
@@ -133,7 +134,7 @@ export default function Home() {
               {t("rd.servicesTeaser.more")} <span aria-hidden="true">→</span>
             </Link>
           </div>
-          <div className="rd-grid3">
+          <div className="rd-grid4">
             {services.map(([title, text], i) => (
               <Reveal key={title} className="rd-service">
                 <span className="rd-service__num">0{i + 1}</span>
