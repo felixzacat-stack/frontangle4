@@ -4,7 +4,8 @@ import { useTranslation } from "react-i18next";
 
 import "./redesign.css";
 
-import DesignSwitcher from "src/redesign/DesignSwitcher";
+// Design switcher hidden for now; index.html fixes data-design="studio". Uncomment both lines to bring it back.
+// import DesignSwitcher from "src/redesign/DesignSwitcher";
 import logo from "src/img/FrontAngle_For_Site.png";
 import ukFlag from "src/img/united-kingdom-flag-icon.svg";
 import deFlag from "src/img/germany-flag-icon.svg";
@@ -32,9 +33,11 @@ export default function Layout() {
   return (
     <div className="rd">
       <div className="rd-banner">
-        <Link to="/">
-          <img src={logo} alt="Front Angle Logo" />
-        </Link>
+        <div className="rd-container">
+          <Link to="/">
+            <img src={logo} alt="Front Angle Logo" />
+          </Link>
+        </div>
       </div>
       <header className="rd-header">
         <div className="rd-container rd-header__inner">
@@ -96,7 +99,7 @@ export default function Layout() {
         </div>
       </footer>
 
-      <DesignSwitcher />
+      {/* <DesignSwitcher /> */}
       <ScrollRestoration />
     </div>
   );

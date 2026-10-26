@@ -70,7 +70,7 @@ const en = {
       tagline: "Pet-sitting on a map (in progress)",
     },
     art: {
-      tagline: "My painting gallery",
+      tagline: "My gallery",
     },
     icharts: {
       tagline: "Charting library for Java",
@@ -181,7 +181,7 @@ const de = {
       tagline: "Pet-Sitting auf der Karte (in Arbeit)",
     },
     art: {
-      tagline: "Meine Kunstgalerie",
+      tagline: "Meine Galerie",
     },
     icharts: {
       tagline: "Diagrammbibliothek für Java",

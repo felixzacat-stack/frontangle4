@@ -42,41 +42,45 @@ export default function Work() {
   );
 }
 
-const galleryLayouts = [
-  ["three", "Three", "One big image with the next two as thumbnails"],
-  ["single", "Single", "Just the big image, level with the description"],
-];
-
-const readLayout = (id, fallback) => {
-  try {
-    return localStorage.getItem(`gallery:${id}`) || fallback;
-  } catch {
-    return fallback;
-  }
-};
+// The Three/Single layout toggle is hidden for now (kept commented out for later).
+// To bring it back, uncomment galleryLayouts, readLayout, the useState/choose lines
+// in Case and the toggle under CaseGallery, and drop the fixed `layout` line.
+//
+// const galleryLayouts = [
+//   ["three", "Three", "One big image with the next two as thumbnails"],
+//   ["single", "Single", "Just the big image, level with the description"],
+// ];
+//
+// const readLayout = (id, fallback) => {
+//   try {
+//     return localStorage.getItem(`gallery:${id}`) || fallback;
+//   } catch {
+//     return fallback;
+//   }
+// };
 
 // One project. Its gallery layout (data-gallery on the article, styled in redesign.css)
-// starts at the project's `gallery` default and can be switched per project with the
-// prototype-only toggle under the images; the choice is remembered per project.
+// is the project's `gallery` setting ("three" if unset).
 function Case({ project: p, index: i }) {
   const { t } = useTranslation();
-  const [layout, setLayout] = useState(() =>
-    readLayout(p.id, p.gallery ?? "three"),
-  );
-
-  const choose = (value) => {
-    setLayout(value);
-    try {
-      localStorage.setItem(`gallery:${p.id}`, value);
-    } catch {
-      // private mode etc.: fine, just don't remember it
-    }
-  };
+  const layout = p.gallery ?? "three";
+  // const [layout, setLayout] = useState(() =>
+  //   readLayout(p.id, p.gallery ?? "three"),
+  // );
+  //
+  // const choose = (value) => {
+  //   setLayout(value);
+  //   try {
+  //     localStorage.setItem(`gallery:${p.id}`, value);
+  //   } catch {
+  //     // private mode etc.: fine, just don't remember it
+  //   }
+  // };
 
   return (
     <Reveal as="article" id={p.id} className="rd-case" data-gallery={layout}>
       <CaseGallery images={p.images} alt={`Screenshot of ${p.name}`}>
-        {p.images.length > 1 && (
+        {/* {p.images.length > 1 && (
           <div
             className="rd-layout-toggle"
             role="radiogroup"
@@ -95,7 +99,7 @@ function Case({ project: p, index: i }) {
               </button>
             ))}
           </div>
-        )}
+        )} */}
       </CaseGallery>
       <div className="rd-case__head">
         <span className="rd-case__num">0{i + 1}</span>

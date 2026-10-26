@@ -99,57 +99,14 @@ export default function Home() {
         </div>
       </Reveal>
 
-      <section className="rd-section">
-        <div className="rd-container">
-          <div className="rd-section__head">
-            <h2 className="rd-section__title">{t("rd.featured.title")}</h2>
-            <Link to="/work" className="rd-textlink">
-              {t("rd.featured.all")} <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-          <div className="rd-cards">
-            {featuredProjects.map((p) => (
-              <Reveal key={p.id} as="article" className="rd-card">
-                <Link to={`/work#${p.id}`} className="rd-card__link">
-                  <div className="rd-card__media">
-                    <img src={p.images[0]} alt={`Screenshot of ${p.name}`} loading="lazy" />
-                  </div>
-                  <div className="rd-card__body">
-                    <h3 className="rd-card__title">{p.name}</h3>
-                    <p className="rd-card__tagline">{t(`rd.projects.${p.id}.tagline`)}</p>
-                    <Chips items={p.stack.slice(0, 4)} />
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeaturedWork />
 
-      <section className="rd-section rd-section--alt">
-        <div className="rd-container">
-          <div className="rd-section__head">
-            <h2 className="rd-section__title">{t("rd.servicesTeaser.title")}</h2>
-            <Link to="/services" className="rd-textlink">
-              {t("rd.servicesTeaser.more")} <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-          <div className="rd-grid4">
-            {services.map(([title, text], i) => (
-              <Reveal key={title} className="rd-service">
-                <span className="rd-service__num">0{i + 1}</span>
-                <h3>{t(`rd.services.${title}`)}</h3>
-                <p>{t(`rd.services.${text}`)}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServicesTeaser />
 
       <section className="rd-section">
         <div className="rd-container">
           <h2 className="rd-section__title">{t("rd.approach.title")}</h2>
-          <div className="rd-grid4">
+          <div className="rd-grid3">
             {principles.map((key) => (
               <Reveal key={key} className="rd-principle">
                 <h3>{t(`rd.approach.${key}Title`)}</h3>
@@ -162,5 +119,65 @@ export default function Home() {
 
       <CtaBand />
     </>
+  );
+}
+
+// "Selected work" cards linking to the Work page. Also used by the classic home page.
+export function FeaturedWork() {
+  const { t } = useTranslation();
+  return (
+    <section className="rd-section">
+      <div className="rd-container">
+        <div className="rd-section__head">
+          <h2 className="rd-section__title">{t("rd.featured.title")}</h2>
+          <Link to="/work" className="rd-textlink">
+            {t("rd.featured.all")} <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+        <div className="rd-cards">
+          {featuredProjects.map((p) => (
+            <Reveal key={p.id} as="article" className="rd-card">
+              <Link to={`/work#${p.id}`} className="rd-card__link">
+                <div className="rd-card__media">
+                  <img src={p.images[0]} alt={`Screenshot of ${p.name}`} loading="lazy" />
+                </div>
+                <div className="rd-card__body">
+                  <h3 className="rd-card__title">{p.name}</h3>
+                  <p className="rd-card__tagline">{t(`rd.projects.${p.id}.tagline`)}</p>
+                  <Chips items={p.stack.slice(0, 4)} />
+                </div>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// "What I do" boxes linking to the Services page. Also used by the classic home page,
+// which passes a four-column grid so the four services fit on one row.
+export function ServicesTeaser({ grid = "rd-grid3" }) {
+  const { t } = useTranslation();
+  return (
+    <section className="rd-section rd-section--alt">
+      <div className="rd-container">
+        <div className="rd-section__head">
+          <h2 className="rd-section__title">{t("rd.servicesTeaser.title")}</h2>
+          <Link to="/services" className="rd-textlink">
+            {t("rd.servicesTeaser.more")} <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+        <div className={grid}>
+          {services.map(([title, text], i) => (
+            <Reveal key={title} className="rd-service">
+              <span className="rd-service__num">0{i + 1}</span>
+              <h3>{t(`rd.services.${title}`)}</h3>
+              <p>{t(`rd.services.${text}`)}</p>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

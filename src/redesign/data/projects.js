@@ -1,4 +1,3 @@
-import ssHome from "src/pages/shapeshop/img/shop-home.png";
 import ssProducts from "src/pages/shapeshop/img/shop-products.png";
 import ssCheckout from "src/pages/shapeshop/img/shop-checkout.png";
 import ssAdmin from "src/pages/shapeshop/img/shop-admin-products.png";
@@ -13,6 +12,10 @@ import psMap from "src/pages/petsitter/img/petsitter-map.png";
 import psProfile from "src/pages/petsitter/img/petsitter-profile.png";
 import psEdit from "src/pages/petsitter/img/petsitter-edit-profile.png";
 import art from "src/pages/artGallery/art1.png";
+import artGallery from "src/pages/artGallery/art-gallery.png";
+import artEventHorizon from "src/pages/artGallery/art-detail-event-horizon.png";
+import artAbstractUntitled2 from "src/pages/artGallery/art-detail-abstract-untitled-2.png";
+import artManWrestlingSnake from "src/pages/artGallery/art-detail-man-wrestling-snake.png";
 import ic1 from "src/pages/icharts/samples/TestDataArea_2_Multiple_Layered.PNG";
 import ic2 from "src/pages/icharts/samples/TestDataArea_4_Multiple_Stacked.PNG";
 import ic3 from "src/pages/icharts/samples/TestDataXY_Simple.PNG";
@@ -36,9 +39,10 @@ export const AKS_URL = "https://shapeshop-aks.eastus.cloudapp.azure.com/";
 export const projects = [
   {
     id: "shapeshop",
+    gallery: "single",
     name: "Shape Shop",
     featured: true,
-    images: [ssHome, ssProducts, ssCheckout, ssAdmin, ssAdminEdit, ssAdminOrders],
+    images: [ssProducts, ssCheckout, ssAdmin, ssAdminEdit, ssAdminOrders],
     stack: ["React", "TypeScript", "Redux Toolkit", "MUI", "Spring Boot", "MySQL", "Stripe", "Azure AKS"],
     textKey: "previous-ss",
     bullets: ["React, Hooks, TypeScript, MUI", "Spring Boot", "MySQL", "Azure Cloud"],
@@ -49,6 +53,7 @@ export const projects = [
   },
   {
     id: "petsit",
+    gallery: "single",
     name: "Petsit!",
     featured: true,
     images: [psMap, psProfile, psEdit],
@@ -56,13 +61,6 @@ export const projects = [
     textKey: "previous-ps",
     bullets: ["React, TypeScript, MUI", "Apollo GraphQL, Google Maps", "NestJS, TypeORM", "MySQL"],
     links: [],
-  },
-  {
-    id: "art",
-    name: "Oliver Watkins Art",
-    images: [art],
-    textKey: "previous-artgallery",
-    links: [{ kind: "visitSite", href: "https://www.oliver-watkins.art/", external: true }],
   },
   {
     id: "icharts",
@@ -74,6 +72,14 @@ export const projects = [
       "Candlestick Charts", "Bar Charts", "Stacked Charts",
     ],
     links: [{ kind: "projectPage", href: "/icharts/" }],
+  },
+  {
+    id: "art",
+    gallery: "single",
+    name: "Oliver Watkins Art",
+    images: [artGallery, artEventHorizon, artAbstractUntitled2, artManWrestlingSnake],
+    textKey: "previous-artgallery",
+    links: [{ kind: "visitSite", href: "https://www.oliver-watkins.art/", external: true }],
   },
   {
     id: "bis",

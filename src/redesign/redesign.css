@@ -131,23 +131,12 @@ html body {
 
 /* ---------- Header ---------- */
 
-/* The old site's logo banner; scrolls away, the nav below stays sticky */
-/* Flush with the old home page's text: .fa-page margin + .home-page-info padding
-   + p margin, at global.scss's breakpoints (phone 450px, tablet 1200px) */
+/* The old site's logo banner; scrolls away, the nav below stays sticky.
+   The logo sits in an .rd-container so it lines up with the page content. */
 .rd-banner {
-  padding: 20px 24px 16px calc(10% + 3rem);
-}
-
-@media (max-width: 1200px) {
-  .rd-banner {
-    padding-left: calc(5px + 1.1rem);
-  }
-}
-
-@media (max-width: 450px) {
-  .rd-banner {
-    padding-left: calc(2px + 1.5rem);
-  }
+  padding: 20px 0 16px;
+  /* A pale tint of the blue menu strip below, so the two read as one header */
+  background: #eaf5fc;
 }
 
 .rd-banner a {

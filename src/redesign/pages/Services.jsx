@@ -19,7 +19,7 @@ export default function Services() {
       </section>
 
       <section className="rd-section rd-section--tight">
-        <div className="rd-container rd-grid2">
+        <div className="rd-container rd-grid3">
           {services.map((key, i) => (
             <Reveal key={key} as="article" className="rd-service rd-service--full">
               <span className="rd-service__num">0{i + 1}</span>
